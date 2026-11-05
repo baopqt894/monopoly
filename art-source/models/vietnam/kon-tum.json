@@ -1,0 +1,29 @@
+{
+  "city": "Kon Tum",
+  "landmark": "Nhà rông Kon Klor",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 91996,
+  "triangles": 177208,
+  "materials": 10,
+  "uvLayers": 1,
+  "dimensions": [
+    1.1443477869033813,
+    1.1200000047683716,
+    1.6829218864440918
+  ],
+  "referenceCrop": [
+    274,
+    347,
+    217,
+    272
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "kon-tum",
+  "glb": "kon-tum.glb",
+  "blend": "art-source/models/vietnam/kon-tum.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

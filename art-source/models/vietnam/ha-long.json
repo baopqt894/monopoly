@@ -1,0 +1,20 @@
+{
+  "id": "ha-long",
+  "city": "Hạ Long",
+  "landmark": "Bảo tàng Quảng Ninh",
+  "revision": 2,
+  "status": "completed-batch",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 6664,
+  "triangles": 12852,
+  "materials": 7,
+  "dimensions": [
+    1.4046204090118408,
+    1.1200001239776611,
+    0.9836039543151855
+  ],
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png",
+  "glb": "ha-long.glb",
+  "blend": "art-source/models/vietnam/ha-long.blend"
+}

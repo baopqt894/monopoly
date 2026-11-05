@@ -1,0 +1,42 @@
+.game-screen .player-cash {
+  color: #28566a;
+  text-shadow: 0 1px 0 #fff;
+}
+.game-screen .game-coin {
+  background: radial-gradient(circle at 35% 30%, #fff1aa, #f2c758 70%);
+  box-shadow:
+    inset 0 0 0 2px #fff0ab99,
+    0 2px 0 #d6a64755;
+}
+.game-screen .game-match-info {
+  background: linear-gradient(130deg, #fffef5f5, #effbf8f2);
+  border-color: #c5e0d8;
+  box-shadow:
+    0 3px 0 #6eabb124,
+    0 8px 22px #448eab12;
+}
+.game-screen .game-toolbelt > button {
+  box-shadow:
+    0 3px 0 #67a5ab25,
+    0 6px 15px #4a92a914;
+}
+.game-screen .play-button:not(.urgent) {
+  background: linear-gradient(#ffdf84, #f6c455);
+  border-color: #fff1b8;
+  box-shadow:
+    0 5px 0 #dba94b,
+    0 8px 0 #fff8ce75,
+    0 12px 25px #c4983c20;
+  color: #80642e;
+}
+.game-screen .play-button:not(.urgent):active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow:
+    0 2px 0 #dba94b,
+    0 5px 0 #fff8ce75;
+}
+@media (min-width: 1360px) and (orientation: landscape) {
+  .game-match-info {
+    left: 32%;
+  }
+}

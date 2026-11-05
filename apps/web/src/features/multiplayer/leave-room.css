@@ -1,0 +1,38 @@
+.game-screen .modal.info-room-dialog.leave-room-confirm {
+  width: min(390px, calc(100vw - 28px));
+}
+.leave-room-symbol {
+  display: grid;
+  place-items: center;
+  padding: 3px 0 7px;
+}
+.exit-room-artwork {
+  width: 120px;
+  height: 83px;
+}
+.leave-room-confirm p {
+  margin: 4px 0 0;
+  padding: 12px;
+  border: 1px solid #e2c8b5;
+  border-radius: 10px;
+  background: #fbe8d9;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #8c705c;
+}
+.leave-room-confirm .leave-room-accept {
+  background: #df9b78;
+  color: #fff9e9;
+}
+.game-toolbelt > .tool-leave {
+  color: #be7658;
+  background: #fff0e6;
+}
+.corner-player.is-bot .investor-portrait {
+  filter: brightness(0.4);
+}
+.corner-player.is-bot .bot-tag {
+  background: #34434e;
+  border-color: #81939f;
+  color: #fff;
+}

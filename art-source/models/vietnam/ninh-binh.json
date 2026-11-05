@@ -1,0 +1,20 @@
+{
+  "id": "ninh-binh",
+  "city": "Ninh Bình",
+  "landmark": "Bảo tháp Bái Đính",
+  "revision": 2,
+  "status": "completed-batch",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 110137,
+  "triangles": 214650,
+  "materials": 5,
+  "dimensions": [
+    1.1905514001846313,
+    1.1200001239776611,
+    2.0680315494537354
+  ],
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png",
+  "glb": "ninh-binh.glb",
+  "blend": "art-source/models/vietnam/ninh-binh.blend"
+}

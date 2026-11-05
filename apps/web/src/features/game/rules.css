@@ -1,0 +1,114 @@
+.game-screen .modal.info-room-dialog.rules-modal {
+  width: min(520px, calc(100vw - 28px));
+}
+.rules-game-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 13px;
+}
+.rules-game-info > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border: 1px solid #c0d3c3;
+  border-radius: 7px;
+  background: #e9f1e1;
+  color: #648576;
+  font-size: 10px;
+  font-weight: 700;
+}
+.rules-game-info > span:last-child {
+  border-color: #ddcb90;
+  background: #fff0bd;
+  color: #927b3d;
+}
+.rules-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: min(400px, calc(100dvh - 190px));
+  padding: 0 3px 4px 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #afc6ba transparent;
+}
+.rules-sections:focus-visible {
+  outline: 2px solid #8bc3ae;
+  outline-offset: 3px;
+  border-radius: 9px;
+}
+.rules-section {
+  flex: 0 0 auto;
+  border: 1px solid #c9d7c1;
+  border-radius: 11px;
+  background: #f2f5e9;
+  overflow: hidden;
+}
+.rules-section[open] {
+  border: 2px solid #a8b7a3;
+  background: #fffdf3;
+}
+.rules-section summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 11px;
+  list-style: none;
+  cursor: pointer;
+}
+.rules-section summary::-webkit-details-marker {
+  display: none;
+}
+.rules-section summary:focus-visible {
+  outline: 3px solid #d2ad51;
+  outline-offset: -3px;
+}
+.rules-section[open] summary {
+  border-bottom: 1px solid #e3d39d;
+  background: #fff0bd;
+}
+.rules-section summary strong {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 800;
+  color: #254f63;
+}
+.rules-section-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 29px;
+  height: 29px;
+  border: 1px solid #bfd1c5;
+  border-radius: 8px;
+  background: #e0ecdc;
+  color: #648576;
+}
+.rules-section[open] .rules-section-icon {
+  background: #fff9e9;
+  border-color: #ddcb90;
+  color: #9d8036;
+}
+.rules-chevron {
+  flex-shrink: 0;
+  color: #83977f;
+}
+.rules-section[open] .rules-chevron {
+  transform: rotate(180deg);
+}
+.rules-section-copy {
+  padding: 11px 13px;
+}
+.rules-section-copy p {
+  margin: 0 0 9px;
+  color: #637e78;
+  font-size: 11px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.rules-section-copy p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,52 @@
+.shared-card-notice {
+  position: absolute;
+  z-index: 7;
+  top: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  width: min(370px, calc(100% - 32px));
+  padding: 13px 16px;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  background: #fff7ddeb;
+  color: #514629;
+  box-shadow: 0 5px 20px #28556b24;
+  pointer-events: none;
+}
+.shared-card-notice > svg {
+  flex-shrink: 0;
+  color: #b57923;
+  margin-top: 3px;
+}
+.shared-card-notice span {
+  display: block;
+  color: #795d33;
+  font-size: 11px;
+  font-weight: 700;
+}
+.shared-card-notice strong {
+  display: block;
+  margin: 3px 0;
+  font-size: 17px;
+}
+.shared-card-notice p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .shared-card-notice {
+    top: 110px;
+    width: min(330px, calc(100% - 36px));
+    padding: 10px 12px;
+  }
+  .shared-card-notice strong {
+    font-size: 15px;
+  }
+  .shared-card-notice p {
+    font-size: 11px;
+  }
+}

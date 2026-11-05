@@ -1,0 +1,29 @@
+{
+  "city": "Bạc Liêu",
+  "landmark": "Nhà hát Cao Văn Lầu",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 116070,
+  "triangles": 221544,
+  "materials": 10,
+  "uvLayers": 1,
+  "dimensions": [
+    1.3757870197296143,
+    1.1200000047683716,
+    1.0568230152130127
+  ],
+  "referenceCrop": [
+    728,
+    100,
+    247,
+    214
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "bac-lieu",
+  "glb": "bac-lieu.glb",
+  "blend": "art-source/models/vietnam/bac-lieu.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

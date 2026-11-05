@@ -1,0 +1,20 @@
+{
+  "id": "dong-hoi",
+  "city": "Đồng Hới",
+  "landmark": "Tháp chuông Tam Tòa",
+  "revision": 2,
+  "status": "completed-batch",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 3812,
+  "triangles": 7228,
+  "materials": 4,
+  "dimensions": [
+    1.3866666555404663,
+    1.1200000047683716,
+    2.493333339691162
+  ],
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png",
+  "glb": "dong-hoi.glb",
+  "blend": "art-source/models/vietnam/dong-hoi.blend"
+}

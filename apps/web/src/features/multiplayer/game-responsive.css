@@ -1,0 +1,172 @@
+/* Shared viewport limits; feature-specific layouts remain next to their components. */
+.game-screen *,
+.game-screen .modal {
+  scrollbar-width: none;
+}
+.game-screen *::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 900px), (max-height: 600px) {
+  .game-screen .game-match-info {
+    gap: 6px;
+    padding: 6px 9px;
+  }
+  .game-screen .turn-dice-status {
+    max-width: calc(100% - 32px);
+    padding: 7px 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+  .game-screen .corner-player {
+    max-width: min(170px, calc(50vw - 20px));
+  }
+  .game-screen .game-center-controls {
+    max-width: calc(100% - 28px);
+  }
+  .game-screen .play-button {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+@media (max-height: 500px) {
+  .game-screen .corner-player {
+    width: 132px;
+    min-width: 0;
+    gap: 5px;
+    padding: 4px;
+    border-radius: 11px;
+  }
+  .game-screen .corner-player .corner-portrait {
+    width: 34px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  .game-screen .corner-player .corner-player-body {
+    min-width: 0;
+    width: auto;
+    flex: 1;
+  }
+  .game-screen .corner-player .player-ribbon {
+    font-size: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .game-screen .corner-player .player-cash {
+    font-size: 16px;
+  }
+  .game-screen .corner-player .player-properties {
+    font-size: 6px;
+  }
+  .game-screen .corner-player-0,
+  .game-screen .corner-player-1 {
+    top: 10px;
+  }
+  .game-screen .corner-player-0,
+  .game-screen .corner-player-2 {
+    left: 10px;
+  }
+  .game-screen .corner-player-1,
+  .game-screen .corner-player-3 {
+    right: 10px;
+  }
+  .game-screen .game-match-info {
+    top: 10px;
+  }
+  .game-screen .game-toolbelt {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    right: 8px;
+    top: calc(50% - 24px);
+  }
+  .game-screen .game-toolbelt > button {
+    width: clamp(19px, calc((100dvh - 186px) / 6), 26px);
+    height: clamp(19px, calc((100dvh - 186px) / 6), 26px);
+    border-radius: 7px;
+  }
+  .game-screen .game-toolbelt > button > svg {
+    width: clamp(13px, 4dvh, 16px);
+    height: clamp(13px, 4dvh, 16px);
+  }
+  .game-screen .game-stage {
+    inset: 0;
+  }
+  .game-screen .game-center-controls {
+    top: 58%;
+    bottom: auto;
+    gap: 6px;
+  }
+  .game-screen .play-button {
+    min-height: 36px;
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+  .game-screen .game-activity-ticker {
+    display: none;
+  }
+  .game-screen .turn-dice-status {
+    top: 63%;
+    bottom: auto;
+  }
+  .game-screen .game-event-token {
+    display: none;
+  }
+}
+@media (max-width: 600px) and (max-height: 500px) {
+  .game-screen .game-match-info {
+    top: 64px;
+  }
+}
+
+@media (max-width: 900px), (max-height: 600px) {
+  .game-screen dialog.modal {
+    max-width: calc(100vw - 24px);
+    max-height: calc(100dvh - 24px);
+    padding: 16px;
+  }
+  .game-screen dialog.modal .modal-header h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-height: 500px) {
+  .game-screen .corner-player.has-turn .corner-portrait {
+    width: 34px;
+    height: 36px;
+  }
+}
+@media (max-width: 600px) and (min-height: 501px) {
+  .game-screen .corner-player.has-turn .corner-portrait {
+    width: 44px;
+    height: 46px;
+  }
+  .game-screen .game-stage .chance-card-observer {
+    left: 50%;
+  }
+}
+
+/* On short windows chat fits between the bottom players, so keep HUDs at the edge. */
+@media (max-height: 500px) {
+  .game-screen .corner-player-2,
+  .game-screen .corner-player-3 {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (min-width: 441px) and (max-height: 500px) {
+  .game-screen .corner-player {
+    width: min(132px, calc((100vw - 244px) / 2));
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape), (max-height: 600px) and (orientation: landscape) {
+  .game-screen .corner-player-2, .game-screen .corner-player-3 { bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 600px) and (orientation: portrait) and (min-height: 501px) {
+  .game-screen .corner-player-2, .game-screen .corner-player-3 { bottom: calc(62px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 900px), (max-height: 600px) {
+  .game-screen .corner-player .corner-player-body { min-width: 0; width: auto; flex: 1; }
+  .game-screen .corner-player .player-ribbon { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}

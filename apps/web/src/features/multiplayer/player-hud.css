@@ -1,0 +1,110 @@
+.game-screen .corner-player {
+  width: max-content;
+  min-width: 170px;
+  max-width: 220px;
+  padding: 6px;
+  gap: 9px;
+  align-items: center;
+  border: 2px solid color-mix(in srgb, var(--player-color) 65%, #fff);
+  border-radius: 16px;
+  background: #fffdf3f5;
+  box-shadow: 0 3px 0 #32646d18, 0 6px 14px #32646d12;
+}
+.game-screen .corner-player .corner-portrait,
+.game-screen .corner-player.has-turn .corner-portrait {
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--player-color) 12%, #fffdf3);
+  box-shadow: none;
+}
+.game-screen .corner-portrait .investor-portrait {
+  border-radius: inherit;
+  background-color: transparent;
+}
+.game-screen .corner-player .corner-player-body {
+  flex: 0 1 auto;
+  width: max-content;
+  min-width: 90px;
+  max-width: 140px;
+  padding: 0;
+  margin: 0;
+  gap: 2px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.game-screen .corner-player .player-ribbon {
+  max-width: none;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #40616a;
+}
+.game-screen .corner-player .player-ribbon::before,
+.game-screen .corner-player-body::after,
+.game-screen .corner-player.has-turn .corner-portrait::after,
+.game-screen .corner-active-arrow {
+  display: none;
+}
+.game-screen .corner-player .player-cash {
+  margin: 0;
+  gap: 5px;
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+.game-screen .corner-player .player-properties {
+  position: static;
+  font-size: 7px;
+  line-height: 1.2;
+  letter-spacing: 0.15px;
+  color: #7b9194;
+}
+.game-screen .corner-player .you-tag {
+  left: 3px;
+  bottom: 2px;
+  transform: none;
+  padding: 2px 4px;
+  font-size: 5px;
+  border-radius: 3px;
+  box-shadow: none;
+}
+.game-screen .corner-player.has-turn {
+  border-color: var(--player-color);
+  background: color-mix(in srgb, var(--player-color) 6%, #fffdf3);
+  box-shadow: 0 0 0 2px #ffffff70, 0 5px 16px #32646d25;
+}
+.game-screen .corner-player.has-turn .player-properties {
+  color: var(--player-color);
+  font-weight: 800;
+}
+@media (max-width: 600px) {
+  .game-screen .corner-player {
+    width: 163px;
+    min-width: 0;
+    max-width: none;
+    padding: 5px;
+    gap: 7px;
+    border-radius: 13px;
+  }
+  .game-screen .corner-player .corner-portrait {
+    width: 44px;
+    height: 46px;
+    border-radius: 8px;
+  }
+  .game-screen .corner-player .corner-player-body { flex: 1; width: auto; min-width: 0; max-width: none; }
+  .game-screen .corner-player .player-ribbon { font-size: 9px; }
+  .game-screen .corner-player .player-cash { font-size: 19px; }
+  .game-screen .corner-player .player-properties { font-size: 6px; }
+}
+@media (max-width: 380px), (max-height: 600px) and (min-width: 601px) {
+  .game-screen .corner-player { width: 150px; min-width: 0; padding: 5px; gap: 6px; }
+  .game-screen .corner-player .corner-portrait { width: 40px; height: 44px; }
+  .game-screen .corner-player .player-ribbon { font-size: 8px; }
+  .game-screen .corner-player .player-cash { font-size: 18px; }
+  .game-screen .corner-player .player-properties { font-size: 6px; }
+}

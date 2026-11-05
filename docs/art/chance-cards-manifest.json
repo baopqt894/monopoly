@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "status": "Legacy illustration provenance; runtime uses the approved cartoon set",
+  "activeManifest": "cards-cartoon-v1.json",
+  "tool": "built-in image_gen",
+  "date": "2026-10-27",
+  "usage": "Ten shared raster illustrations inside SVG Chance/Community card images. Titles and descriptions are drawn as SVG text from getCard() so Vietnamese and board-specific rules stay exact.",
+  "rendering": "apps/web/src/features/game/CardArtwork.tsx",
+  "layoutRevision": {
+    "date": "2026-11-01",
+    "frame": "600x800 SVG; illustration fits in a separate 464x464 square using xMidYMid meet, with no clipping mask; native deck-colored header and thin border",
+    "text": "Separate title, description and optional destination regions; existing Vietnamese copy and effects unchanged",
+    "review": "39 faces, both deck backs and festival destination variant; shared renderer used for gameplay and review sheets",
+    "artwork": "Existing WebP illustrations retained without modifying source images"
+  },
+  "assets": [
+    {
+      "id": "travel",
+      "file": "public/assets/cards/chance/travel.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A bright turquoise vintage toy airplane flying low beside a winding ivory board-game path, miniature Vietnamese rooftops, a little suitcase and compass; sense of travel and adventure. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2313578,
+      "sha256": "086f969bc192d6a29e535778acf99b4385f5c72b53e05d79c28330e14fd10b1f",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "fortune",
+      "file": "public/assets/cards/chance/fortune.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A cheerful miniature gold bank, neat stacks of gold coins and banknotes, one rising mint-green investment arrow, a few sparkling stars. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 1963733,
+      "sha256": "7afae13bc2561eb968e1b8c89cbd3fbd9ab66b2fc8bee0984d213a4d37b79c78",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "rescue",
+      "file": "public/assets/cards/chance/rescue.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A tiny sunny sand island with a simple palm tree and a small rescue boat approaching, a golden key and life buoy in the foreground. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2165365,
+      "sha256": "9340302e3f2cd7c957295767158e6c2ba590262224607c6fd44ddb8879bfc5c5",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "cost",
+      "file": "public/assets/cards/chance/cost.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A miniature coral-red coin purse with a gold coin being paid, a small traffic sign and elegant receipt, playful and friendly rather than alarming. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2009181,
+      "sha256": "d178502b6c420ee93213c83e03081b7756b804eec946cc00e087a5a39ea9ea28",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "repair",
+      "file": "public/assets/cards/chance/repair.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A handsome tiny Vietnamese terracotta-roof townhouse with a large golden wrench and a rolled construction plan, a few clean roof tiles beside it. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2000717,
+      "sha256": "334259114976c5c329d1f4504b8678ed6e7334e76a0ac68f6317a3c78783bce2",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "disaster",
+      "file": "public/assets/cards/chance/disaster.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: Two charming miniature terracotta-roof Vietnamese houses with a stylized clean crack in the ground, gently tilted roof, a few bricks, no destruction realism or people. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2225018,
+      "sha256": "bf274812ab0d9f0dc0c463795c71c0b9c527f3f18b0127e7070869fd1f150d8b",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "power",
+      "file": "public/assets/cards/chance/power.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A mint miniature Vietnamese city house with dark windows, a large friendly golden lightning bolt and an unplugged cable in the foreground. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2039651,
+      "sha256": "4f3b5fcb85056f375316142385c0a7031ba9563a5591bd54c6ef183607c99e18",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "gift",
+      "file": "public/assets/cards/chance/gift.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A beautiful miniature Vietnamese townhouse tucked inside an open coral-and-gold gift box with a broad mint ribbon, a few gold coins and celebratory stars. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2312460,
+      "sha256": "2c2cddfa16219b8e74e44723bed2d402bcbcc081023870b43292b65c47aafc2a",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "festival",
+      "file": "public/assets/cards/chance/festival.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. Subject: A festive miniature Vietnamese town square with bright coral and golden lanterns, small mint banners and warm cheerful lights, clean few details. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2397089,
+      "sha256": "eaa59659d4e77b6a6143344cfdd2e482d200920c3ccb13d86d103a967714cfc9",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "fire",
+      "file": "public/assets/cards/chance/fire.png",
+      "prompt": "Use case: stylized-concept. Production illustration for a Vietnamese travel board game's Chance card. Square image, no text, no lettering, no numbers, no watermark, no frame, no UI. A small charming Vietnamese terracotta-roof townhouse with a few large stylized coral-orange flames at one side of the roof, a friendly golden fire extinguisher in the foreground, no people, no realistic catastrophe or injury. Cohesive polished handcrafted 3D toy miniature, rounded bevels, ceramic and matte materials, turquoise mint, coral, warm cream and gold palette, soft sunny upper-left lighting, simple warm ivory seamless background, centered hero composition, generous breathing room, very legible at 240 pixels, charming clean art with restrained detail. Render one single illustration, not a sheet.",
+      "bytes": 2178650,
+      "sha256": "1767a6bd724f764aebfe4385e968b23e8eb728d35a3ab8265b134f21d4cf2e50",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

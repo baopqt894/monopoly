@@ -1,0 +1,101 @@
+.history-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #8b988b;
+  font-size: 10px;
+}
+.history-summary span:first-child {
+  padding: 6px 9px;
+  border: 1px solid #dccc94;
+  border-radius: 7px;
+  background: #fff0bd;
+  color: #8a794b;
+  font-weight: 700;
+}
+.city-history-list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0 3px 4px 0;
+  max-height: min(375px, calc(100dvh - 180px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #afc6ba transparent;
+}
+.city-history-list:focus-visible {
+  outline: 2px solid #8bc3ae;
+  outline-offset: 3px;
+  border-radius: 9px;
+}
+.city-history-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid #d4ddca;
+  border-radius: 11px;
+  background: #fffdf3;
+}
+.history-entry-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 29px;
+  height: 29px;
+  border: 1px solid #bfd1c5;
+  border-radius: 8px;
+  background: #e9f1e1;
+  color: #648576;
+}
+.city-history-entry.is-money .history-entry-icon {
+  background: #fff0bd;
+  border-color: #ddc887;
+  color: #a38434;
+}
+.city-history-entry.is-property .history-entry-icon {
+  background: #dcebec;
+  border-color: #aec8ce;
+  color: #487c8a;
+}
+.city-history-entry.is-event .history-entry-icon {
+  background: #f9dfcf;
+  border-color: #e1bfa7;
+  color: #b67551;
+}
+.city-history-entry p {
+  flex: 1;
+  min-width: 0;
+  margin: 2px 0 0;
+  font-size: 11px;
+  line-height: 1.65;
+  color: #526f70;
+  overflow-wrap: anywhere;
+}
+.city-history-entry.is-money p,
+.city-history-entry.is-property p {
+  color: #315d64;
+  font-weight: 600;
+}
+.history-round {
+  flex-shrink: 0;
+  padding: 4px 6px;
+  border: 1px solid #d5ddc9;
+  border-radius: 6px;
+  background: #eef2e5;
+  color: #879582;
+  font-size: 9px;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .city-history-entry {
+    gap: 7px;
+    padding: 9px;
+  }
+  .history-round {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,10 @@
+.investor-portrait.pawn-portrait {
+  background-image: none;
+  object-fit: contain;
+  background-color: #edf2df;
+}
+.investor-portrait.pawn-portrait-loading {
+  display: grid;
+  place-items: center;
+  color: #fff4db;
+}

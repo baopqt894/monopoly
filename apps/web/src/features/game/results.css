@@ -1,0 +1,190 @@
+.game-screen .modal.info-room-dialog.results-modal {
+  width: min(470px, calc(100vw - 28px));
+}
+.results-winner {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 7px 0 16px;
+  padding: 19px 15px;
+  border: 2px solid #ddc983;
+  border-radius: 13px;
+  background: #fff0bd;
+}
+.results-winner-portrait {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 62px;
+  height: 62px;
+  border: 2px solid #bba561;
+  border-radius: 13px;
+  background: #fff9e9;
+  color: #b58b32;
+  box-shadow: 0 3px 0 #d5bd77;
+}
+.results-winner-portrait .investor-portrait {
+  border-radius: 11px;
+  background-color: transparent;
+}
+.results-crown {
+  position: absolute;
+  top: -14px;
+  left: -8px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 28px;
+  border: 2px solid #254f63;
+  border-radius: 8px;
+  background: #ffda77;
+  color: #8c6c22;
+  transform: rotate(-12deg);
+}
+.results-crown svg {
+  fill: #f3c553;
+}
+.results-winner-copy {
+  min-width: 0;
+}
+.results-winner-label {
+  color: #a5843c;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.results-winner-copy h3 {
+  margin: 5px 0;
+  color: #254f63;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.results-winner-copy p {
+  margin: 0;
+  color: #94824d;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.results-no-winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #eaf2e1;
+  border-radius: 12px;
+  color: #648576;
+}
+.results-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 7px;
+  margin-bottom: 8px;
+}
+.results-rank-col {
+  width: 39px;
+}
+.results-worth-col {
+  width: 112px;
+}
+.results-table thead th {
+  padding: 0 6px 3px;
+  text-align: left;
+  color: #8b988b;
+  font-size: 9px;
+  font-weight: 600;
+}
+.results-table thead th:last-child {
+  text-align: right;
+  padding-right: 11px;
+}
+.results-table tbody td,
+.results-table tbody th {
+  padding: 8px 6px;
+  border-top: 1px solid #d5dfcb;
+  border-bottom: 1px solid #d5dfcb;
+  background: #f0f4e8;
+}
+.results-table tbody th {
+  border-left: 1px solid #d5dfcb;
+  border-radius: 10px 0 0 10px;
+}
+.results-table tbody td:last-child {
+  padding-right: 11px;
+  border-right: 1px solid #d5dfcb;
+  border-radius: 0 10px 10px 0;
+}
+.results-table tr.is-winner td,
+.results-table tr.is-winner th {
+  border-color: #e0cd91;
+  background: #fff0bd;
+}
+.results-rank {
+  color: #92a393;
+  font-size: 14px;
+  font-weight: 800;
+}
+.is-winner .results-rank {
+  color: #a78335;
+}
+.results-player {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.results-avatar {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: 1px solid #c3d2bc;
+  border-radius: 8px;
+  background: #fff9e9;
+}
+.results-avatar .investor-portrait {
+  border-radius: inherit;
+  background-color: transparent;
+}
+.results-player strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #254f63;
+}
+.results-worth {
+  text-align: right;
+  color: #254f63;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.results-bankrupt {
+  color: #b57c64;
+  font-size: 10px;
+}
+.results-table .is-bankrupt .results-player {
+  opacity: 0.55;
+}
+.results-lobby-button {
+  width: 100%;
+  margin-top: 5px;
+}
+@media (max-width: 420px) {
+  .results-worth-col {
+    width: 91px;
+  }
+  .results-player {
+    gap: 5px;
+  }
+  .results-player strong {
+    font-size: 11px;
+  }
+  .results-worth {
+    font-size: 12px;
+  }
+}

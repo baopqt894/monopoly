@@ -1,0 +1,20 @@
+{
+  "id": "hoi-an",
+  "city": "Hội An",
+  "landmark": "Chùa Cầu",
+  "revision": 2,
+  "status": "completed-batch",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 58630,
+  "triangles": 114020,
+  "materials": 10,
+  "dimensions": [
+    1.4199999570846558,
+    0.77681964635849,
+    0.9853090643882751
+  ],
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png",
+  "glb": "hoi-an.glb",
+  "blend": "art-source/models/vietnam/hoi-an.blend"
+}

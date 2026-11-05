@@ -1,0 +1,29 @@
+{
+  "city": "Sóc Trăng",
+  "landmark": "Chùa Khleang",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 95066,
+  "triangles": 172132,
+  "materials": 9,
+  "uvLayers": 1,
+  "dimensions": [
+    0.8668200373649597,
+    1.1200001239776611,
+    1.3270742893218994
+  ],
+  "referenceCrop": [
+    493,
+    60,
+    235,
+    253
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "soc-trang",
+  "glb": "soc-trang.glb",
+  "blend": "art-source/models/vietnam/soc-trang.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

@@ -1,0 +1,54 @@
+.card-board-recipients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.card-board-recipients button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid #c6d7bb;
+  border-radius: 9px;
+  background: #fffef4;
+  font: inherit;
+  font-size: 15px;
+  color: #416653;
+  cursor: pointer;
+}
+.card-board-recipients button.is-selected {
+  background: #d9f1c9;
+  border-color: #63a97d;
+}
+.card-board-recipients i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.game-screen.is-targeting-card .game-activity-ticker,
+.game-screen.is-targeting-card .game-event-token,
+.game-screen.is-targeting-card .scene3d-instructions {
+  visibility: hidden;
+}
+.game-screen.is-targeting-card .schematic-stage {
+  filter: none;
+  opacity: 1;
+}
+.board-tile.is-card-unavailable {
+  filter: brightness(0.35) saturate(0.5);
+}
+.board-tile.is-card-target {
+  background: #efffdf;
+  box-shadow: inset 0 0 0 3px #8de8b5;
+}
+.board-tile.is-card-target.is-card-selected {
+  background: #fff0b1;
+  box-shadow: inset 0 0 0 3px #e6a932;
+}
+
+@media (max-width: 900px), (max-height: 600px) {
+  .card-board-recipients { gap: 6px; }
+  .card-board-recipients button { min-height: 36px; padding: 6px 9px; font-size: 12px; overflow-wrap: anywhere; }
+}

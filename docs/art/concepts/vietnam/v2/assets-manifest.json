@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "type": "generated-concept-images",
+  "tool": "built-in image_gen",
+  "scope": "Current approved house/landmark references and runtime corner atlas; superseded preview images removed.",
+  "mapStatus": "prototype — visual quality rejected by user, not a completed map",
+  "assets": [
+    {
+      "file": "../../../../../public/assets/board/corners-go-arrow.png",
+      "bytes": 1769656,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4ffcedfdd2d7213966b94c1d20091ac1a9494f3b8a2f747bb4fcb904f16870de"
+    },
+    {
+      "file": "houses-simple-overview.png",
+      "bytes": 2107084,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ad5a05520cb8e5994367e7a080055b55623617973e0cfc52782df5ff0cc2000c"
+    },
+    {
+      "file": "landmarks-simple-revised.png",
+      "bytes": 2023004,
+      "width": 1209,
+      "height": 1301,
+      "sha256": "fb30cb913a0c6aa0fed29fe6ddfeb8fa05f3751c2f46f1136c27e4315a9299b4"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+.match-clock {
+  position: absolute;
+  left: 50%;
+  top: 36%;
+  transform: translate(-50%, -100%);
+  z-index: 2;
+  pointer-events: none;
+  padding: 3px;
+  border: 1px solid #d8cbaa;
+  border-radius: 7px;
+  background: #fff7df;
+  box-shadow:
+    0 3px 0 #c1b59a,
+    0 5px 10px #275e6420;
+}
+.match-clock::before,
+.match-clock::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 3px);
+  width: 3px;
+  height: 8px;
+  background: #b6a888;
+  border-radius: 0 0 2px 2px;
+}
+.match-clock::before {
+  left: 16%;
+}
+.match-clock::after {
+  right: 16%;
+}
+.match-clock-face {
+  display: block;
+  padding: 3px 9px;
+  border: 1px solid #497e78;
+  border-radius: 4px;
+  color: #fff7dc;
+  background: #3e716d;
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(16px, 1.5vw, 22px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.match-clock.is-urgent .match-clock-face {
+  background: #ad6554;
+  border-color: #965546;
+}
+
+@media (max-width: 900px), (max-height: 600px) {
+  .match-clock { padding: 2px; }
+  .match-clock-face { font-size: 13px; padding: 2px 6px; letter-spacing: .5px; }
+}

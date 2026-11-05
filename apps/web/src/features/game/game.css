@@ -1,0 +1,358 @@
+.turn-card {
+  padding: 20px;
+}
+.turn-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.turn-heading .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+}
+.live-dot {
+  height: 6px;
+  width: 6px;
+  background: #88a773;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #88a77313;
+}
+.turn-player {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 20px;
+}
+.turn-avatar {
+  height: 42px;
+  width: 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+}
+.turn-player h2 {
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  font-weight: 600;
+}
+.turn-player div > span {
+  font-size: 8px;
+  color: #929989;
+  margin-top: 5px;
+  display: block;
+}
+.dice-tray {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+}
+.dice-caption {
+  text-align: center;
+  font-size: 8px;
+  color: #929989;
+  margin: 9px 0 22px;
+  line-height: 1.6;
+}
+.dice-caption strong {
+  color: var(--green);
+  font-size: 11px;
+}
+.roll-button {
+  width: 100%;
+  font-size: 12px;
+}
+.roll-button > span {
+  margin-left: auto;
+}
+.roll-button > svg:first-child {
+  margin-right: auto;
+}
+.turn-hint {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 7px;
+  color: #a0a68f;
+  margin-top: 12px;
+}
+.turn-prompt {
+  border: 1px dashed #ccd7c1;
+  border-radius: 8px;
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 9px;
+  background: #f3f5ec;
+}
+.bail-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+}
+.bail-buttons button {
+  font-size: 8px;
+  background: #f0f2e9;
+  border-radius: 6px;
+  padding: 7px;
+  flex: 1;
+}
+.investment-card {
+  margin-top: 16px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  min-height: 226px;
+  background: #eef1e6;
+  border-color: #e0e6d6;
+}
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  color: #8d9a81;
+  letter-spacing: 0.7px;
+}
+.investment-card h3 {
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 1;
+}
+.investment-card p {
+  font-size: 9px;
+  line-height: 1.9;
+  color: #919c84;
+  max-width: 160px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+.investment-card .text-button {
+  margin-top: 19px;
+  font-size: 9px;
+  position: relative;
+  z-index: 1;
+}
+.investment-art {
+  position: absolute;
+  right: -10px;
+  bottom: -3px;
+  display: flex;
+  align-items: flex-end;
+  color: #b4c2a6;
+  gap: 0;
+  opacity: 0.65;
+  transform: rotate(-5deg);
+}
+.investment-art svg {
+  margin-left: -18px;
+}
+.quick-actions {
+  margin-top: 15px;
+  border-bottom: 1px solid var(--line);
+}
+.quick-actions button {
+  display: flex;
+  width: 100%;
+  padding: 14px 6px;
+  background: transparent;
+  align-items: center;
+  gap: 9px;
+  border-top: 1px solid var(--line);
+  color: #788a75;
+  font-size: 9px;
+}
+.quick-actions button svg:last-child {
+  margin-left: auto;
+  color: #a9b09c;
+}
+.quick-actions button:hover:not(:disabled) {
+  background: #edf1e6;
+}
+.current-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 4px;
+  width: 100%;
+  background: transparent;
+  text-align: left;
+  color: #87957d;
+}
+.current-location > span {
+  font-size: 7px;
+}
+.current-location strong {
+  display: block;
+  color: #5f755b;
+  font-size: 8px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.current-location > span:last-child {
+  margin-left: auto;
+  font-family: Manrope, sans-serif;
+}
+.purchase-card {
+  margin-top: 16px;
+  overflow: hidden;
+}
+.property-banner {
+  height: 80px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.property-banner > span {
+  font-size: 10px;
+  font-weight: 600;
+}
+.purchase-body {
+  padding: 18px;
+}
+.purchase-body .eyebrow {
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+.purchase-body h3 {
+  font-size: 17px;
+  margin-top: 9px;
+}
+.purchase-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 17px 0;
+}
+.purchase-price > span {
+  font-size: 10px;
+  color: #8d9986;
+}
+.purchase-price .money {
+  font-size: 22px;
+}
+.purchase-body .primary-button {
+  width: 100%;
+  font-size: 10px;
+}
+.auction-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+  width: 100%;
+  background: none;
+  font-size: 9px;
+  padding: 13px 0 0;
+  color: #7e8c73;
+}
+.recent-activity {
+  margin-top: 20px;
+  padding: 18px 20px;
+}
+.activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.activity-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #6c8065;
+}
+.activity-header .text-button {
+  font-size: 8px;
+}
+.activity-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 6px 0;
+}
+.activity-row > i {
+  width: 5px;
+  height: 5px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #a5b19a;
+  flex-shrink: 0;
+}
+.activity-row.event > i {
+  background: #c4a05f;
+}
+.activity-row p {
+  font-size: 8px;
+  line-height: 1.7;
+  color: #8b9782;
+}
+.activity-row > span {
+  font-size: 7px;
+  white-space: nowrap;
+  margin-left: auto;
+  color: #a0a891;
+}
+.history-list {
+  max-height: 55vh;
+  overflow-y: auto;
+}
+.history-list .activity-row {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.history-list .activity-row p {
+  font-size: 11px;
+}
+.history-list .activity-row > span {
+  font-size: 9px;
+}
+@media (max-width: 600px) {
+  .action-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .turn-card {
+    padding: 18px;
+  }
+  .turn-player {
+    margin-top: 12px;
+  }
+  .dice-tray {
+    min-height: 100px;
+  }
+  .investment-card {
+    display: none;
+  }
+  .quick-actions {
+    margin-top: 0;
+  }
+  .current-location {
+    padding: 3px;
+  }
+  .purchase-card {
+    margin-top: 0;
+  }
+  .recent-activity {
+    margin-top: 14px;
+    padding: 15px;
+  }
+  .activity-row p {
+    font-size: 9px;
+  }
+}

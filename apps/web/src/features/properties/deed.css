@@ -1,0 +1,291 @@
+.game-screen .modal.property-modal {
+  width: min(550px, calc(100vw - 28px));
+  padding: 24px;
+  border: 2px solid #fffdf0;
+  border-radius: 22px;
+  background: #fffcf2;
+  color: #365960;
+  scrollbar-width: none;
+}
+.property-modal::-webkit-scrollbar,
+.property-scroll-body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.property-modal .modal-header {
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.game-screen .property-modal .modal-header h2 {
+  flex: 1;
+  font-size: 22px;
+  color: #31565d;
+}
+.property-modal .modal-header .icon-button {
+  flex-shrink: 0;
+}
+.property-scroll-body {
+  max-height: min(620px, calc(100dvh - 170px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  padding: 0 0 3px;
+}
+.property-scroll-body:focus-visible {
+  outline: 2px solid #8bc3ae;
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+.property-modal .deed-banner {
+  padding: 16px;
+  gap: 14px;
+  margin: 0 0 17px;
+  border: 1px solid color-mix(in srgb, var(--deed-color) 25%, #e5ebdf);
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--deed-color) 11%, #fffdf5);
+  color: #416961;
+}
+.deed-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--deed-color);
+  color: white;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--deed-color) 25%, transparent);
+}
+.property-modal .deed-title {
+  min-width: 0;
+  color: #81988c;
+  font-size: 10px;
+}
+.property-modal .deed-title strong {
+  margin-top: 4px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #3d635c;
+  overflow-wrap: anywhere;
+}
+.property-modal .deed-stats {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.property-modal .deed-stats > span {
+  padding: 11px 10px;
+  border: 1px solid #e7ecdf;
+  border-radius: 10px;
+  background: #f3f6ed;
+  font-size: 9px;
+  color: #80968b;
+}
+.property-modal .deed-stats > span:last-child {
+  background: #e6f2e7;
+  border-color: #d8e8d7;
+}
+.property-modal .deed-stats strong {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #486a5f;
+  overflow-wrap: anywhere;
+}
+.property-modal .deed-stats .money {
+  font:
+    900 17px Manrope,
+    sans-serif;
+  color: #326c51;
+}
+.property-modal .deed-status {
+  display: inline-flex;
+  gap: 6px;
+  max-width: 100%;
+  padding: 8px 10px;
+  margin: 0 6px 8px 0;
+  border: 1px solid #e6ebdc;
+  border-radius: 8px;
+  background: #f1f4e9;
+  color: #7a927e;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.property-modal .deed-status svg {
+  flex-shrink: 0;
+}
+.deed-rent-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 15px 1px 9px;
+}
+.deed-rent-heading strong {
+  color: #4f7568;
+  font-size: 11px;
+  font-weight: 700;
+}
+.deed-rent-heading > span {
+  color: #92a091;
+  font-size: 9px;
+}
+.deed-rent-block {
+  border: 1px solid #e1e8db;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.deed-rent-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.deed-rent-table td,
+.deed-rent-table th {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e9eee3;
+  background: #fffef9;
+}
+.deed-rent-table tr:last-child td,
+.deed-rent-table tr:last-child th {
+  border-bottom: 0;
+}
+.deed-rent-table td:first-child {
+  width: 36px;
+  padding-right: 0;
+}
+.deed-rent-table th {
+  color: #6c8378;
+  font-size: 11px;
+  text-align: left;
+  font-weight: 500;
+}
+.deed-rent-table td:last-child {
+  text-align: right;
+  color: #355e50;
+  font:
+    800 13px Manrope,
+    sans-serif;
+  white-space: nowrap;
+}
+.deed-rent-level {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 6px;
+  background: #eff3e9;
+  color: #97a78e;
+  font:
+    700 10px Manrope,
+    sans-serif;
+}
+.deed-rent-table .current-level td,
+.deed-rent-table .current-level th {
+  background: #e8f3e5;
+  color: #386e53;
+  font-weight: 800;
+}
+.deed-rent-table .current-level .deed-rent-level {
+  background: #69aa86;
+  color: #fff;
+}
+.deed-management,
+.property-modal .buyback-action {
+  margin: 10px 0 18px;
+  padding: 14px;
+  border: 1px solid #dbe8d5;
+  border-radius: 12px;
+  background: #f2f7eb;
+}
+.deed-management:empty {
+  display: none;
+}
+.deed-management .property-actions {
+  margin: 0;
+}
+.property-modal .property-level-picker {
+  margin: 0 0 13px;
+}
+.property-modal .property-level-picker legend {
+  font-size: 12px;
+  color: #517768;
+}
+.property-modal .property-action-buttons {
+  margin-top: 10px;
+}
+.property-modal .property-action-buttons > button,
+.property-modal .buyback-action > button {
+  min-height: 42px;
+  border-radius: 11px;
+  font-size: 12px;
+}
+.property-modal .buyback-action > button {
+  width: 100%;
+}
+.property-modal .property-total {
+  margin: 0 0 12px;
+}
+.property-modal .property-total > span {
+  font-size: 11px;
+}
+.property-modal .buyback-action p,
+.property-modal .modal-note {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #859780;
+}
+.property-modal .modal-body {
+  padding: 14px;
+  margin: 0;
+  border-radius: 12px;
+  background: #f1f5eb;
+  color: #638174;
+  font-size: 12px;
+  line-height: 1.8;
+}
+@media (max-width: 600px) {
+  .game-screen .modal.property-modal {
+    width: calc(100vw - 24px);
+    padding: 18px;
+    border-radius: 19px;
+  }
+  .game-screen .property-modal .modal-header h2 {
+    font-size: 20px;
+  }
+  .property-modal .deed-banner {
+    padding: 13px;
+    gap: 12px;
+  }
+  .property-modal .deed-title strong {
+    font-size: 22px;
+  }
+  .deed-icon {
+    flex-basis: 44px;
+    height: 46px;
+    border-radius: 10px;
+  }
+  .property-modal .deed-stats {
+    gap: 6px;
+  }
+  .property-modal .deed-stats > span {
+    padding: 10px 7px;
+    font-size: 8px;
+  }
+  .property-modal .deed-stats .money {
+    font-size: 15px;
+  }
+  .property-modal .deed-stats strong {
+    font-size: 11px;
+  }
+  .deed-rent-table td,
+  .deed-rent-table th {
+    padding: 8px;
+  }
+  .deed-rent-table th {
+    font-size: 10px;
+  }
+  .deed-rent-table td:last-child {
+    font-size: 12px;
+  }
+}

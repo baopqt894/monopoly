@@ -1,0 +1,109 @@
+.airport-info-hero {
+  display: flex;
+  align-items: center;
+  min-height: 118px;
+  padding: 6px 12px 4px 18px;
+  border: 2px solid #b5cfc4;
+  border-radius: 14px;
+  background: #e4f1de;
+  overflow: hidden;
+}
+.airport-info-hero h3 {
+  margin: 0;
+  font-size: 27px;
+  font-weight: 800;
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+.airport-info-art {
+  width: 235px;
+  max-width: 65%;
+  height: auto;
+  margin-left: auto;
+  object-fit: contain;
+  max-height: 128px;
+}
+.airport-info-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin: 12px 0;
+}
+.airport-info-metrics > div {
+  padding: 12px;
+  border: 2px solid #ddd1a0;
+  border-radius: 12px;
+  background: #fff0b5;
+}
+.airport-info-metrics > div + div {
+  border-color: #bfd5c8;
+  background: #e6f0e2;
+}
+.airport-info-metrics span {
+  display: block;
+  font-size: 10px;
+  color: #6c8179;
+  margin-bottom: 5px;
+}
+.airport-info-metrics strong {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+.airport-info-metrics > div:first-child strong {
+  font-size: 25px;
+}
+.airport-info-rules {
+  display: grid;
+  gap: 9px;
+}
+.airport-info-rules > div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 12px;
+  border: 2px solid #dedbc7;
+  border-radius: 12px;
+  background: #fffcf2;
+}
+.airport-rule-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  height: 38px;
+  border: 1px solid #e2c1a2;
+  border-radius: 11px;
+  background: #ffd2af;
+  box-shadow: 0 2px 0 #d6b596;
+}
+.airport-rule-icon svg {
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+}
+.airport-info-rules > div + div .airport-rule-icon {
+  background: #ddebf0;
+  border-color: #b2c9d1;
+  box-shadow: 0 2px 0 #afc5cc;
+}
+.airport-info-rules strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+.airport-info-rules p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #6c8179;
+}
+@media (max-width: 420px) {
+  .airport-info-hero {
+    padding-left: 12px;
+  }
+  .airport-info-hero h3 {
+    font-size: 23px;
+  }
+  .airport-info-metrics strong {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "city": "Huế",
+  "landmark": "Ngọ Môn",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 138996,
+  "triangles": 256804,
+  "materials": 11,
+  "uvLayers": 1,
+  "dimensions": [
+    1.4200000762939453,
+    0.6473529934883118,
+    1.0799314975738525
+  ],
+  "referenceCrop": [
+    0,
+    672,
+    274,
+    226
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "hue",
+  "glb": "hue.glb",
+  "blend": "art-source/models/vietnam/hue.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

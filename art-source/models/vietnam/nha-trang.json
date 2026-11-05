@@ -1,0 +1,29 @@
+{
+  "city": "Nha Trang",
+  "landmark": "Tháp Trầm Hương",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 42520,
+  "triangles": 78256,
+  "materials": 7,
+  "uvLayers": 1,
+  "dimensions": [
+    1.2565854787826538,
+    1.1200001239776611,
+    1.777073860168457
+  ],
+  "referenceCrop": [
+    733,
+    348,
+    231,
+    270
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "nha-trang",
+  "glb": "nha-trang.glb",
+  "blend": "art-source/models/vietnam/nha-trang.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

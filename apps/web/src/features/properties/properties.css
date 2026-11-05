@@ -1,0 +1,191 @@
+.deed-banner {
+  padding: 23px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.deed-banner > span {
+  font-size: 10px;
+  opacity: 0.95;
+}
+.deed-banner strong {
+  display: block;
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  margin-top: 7px;
+}
+.deed-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 23px 0;
+}
+.deed-stats > span {
+  font-size: 9px;
+  color: #85937b;
+}
+.deed-stats strong {
+  display: block;
+  color: var(--ink);
+  font-size: 14px;
+  margin-top: 8px;
+}
+.deed-status {
+  background: #f0f3e8;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.rent-label {
+  margin-top: 23px;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.rent-table {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  margin-top: 11px;
+}
+.rent-table > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 13px;
+  font-size: 10px;
+  border-top: 1px solid var(--line);
+  color: #7d8c74;
+}
+.rent-table > div:first-child {
+  border-top: 0;
+}
+.rent-table .current-level {
+  background: #eaf0e2;
+  color: var(--green);
+}
+.property-actions {
+  margin-top: 20px;
+}
+.property-action-buttons {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.property-action-buttons > button {
+  flex: 1 1 auto;
+  font-size: 9px;
+  min-height: 35px;
+  padding: 9px 11px;
+}
+.property-error {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.portfolio-modal {
+  width: min(620px, calc(100vw - 30px));
+}
+.portfolio-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  background: #f1f4eb;
+  border-radius: 10px;
+  padding: 17px;
+}
+.portfolio-summary > span {
+  font-size: 9px;
+  color: #87947d;
+}
+.portfolio-summary strong {
+  display: block;
+  font-size: 17px;
+  color: var(--green);
+  margin-top: 8px;
+}
+.portfolio-list {
+  max-height: 48vh;
+  overflow-y: auto;
+}
+.portfolio-property {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.portfolio-property-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.property-swatch {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 42px;
+  border-radius: 7px;
+  color: white;
+}
+.portfolio-property-heading > div {
+  flex: 1;
+}
+.portfolio-property-heading strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+.portfolio-property-heading small {
+  display: block;
+  font-size: 9px;
+  color: #8a977f;
+  margin-top: 5px;
+}
+.portfolio-property-heading .money {
+  font-size: 12px;
+}
+.property-actions.compact {
+  margin-top: 7px;
+}
+.property-actions.compact .property-action-buttons {
+  margin-top: 0;
+}
+.property-actions.compact button {
+  min-height: 28px;
+  padding: 6px 8px;
+  font-size: 8px;
+  flex: 0 1 auto;
+}
+.debt-callout {
+  background: #fff1df;
+  border: 1px solid #ebd2af;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #a2753d;
+}
+.debt-callout strong {
+  font-size: 14px;
+}
+.debt-callout p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin-top: 7px;
+}
+.bankruptcy-button {
+  display: block;
+  padding: 11px 15px;
+  background: #f8e8e0;
+  border-radius: 9px;
+  color: #ad6b55;
+  margin-top: 15px;
+  font-size: 11px;
+}
+
+.rent-table strong, .deed-stats .money { color: #000; font-weight: 900; }

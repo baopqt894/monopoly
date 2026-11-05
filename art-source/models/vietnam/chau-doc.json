@@ -1,0 +1,29 @@
+{
+  "city": "Châu Đốc",
+  "landmark": "Miếu Bà Chúa Xứ",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 85447,
+  "triangles": 156882,
+  "materials": 8,
+  "uvLayers": 1,
+  "dimensions": [
+    1.3620100021362305,
+    1.1200000047683716,
+    1.4478392601013184
+  ],
+  "referenceCrop": [
+    0,
+    58,
+    248,
+    251
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "chau-doc",
+  "glb": "chau-doc.glb",
+  "blend": "art-source/models/vietnam/chau-doc.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

@@ -1,0 +1,29 @@
+{
+  "city": "Phan Thiết",
+  "landmark": "Tháp nước Phan Thiết",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 75570,
+  "triangles": 138276,
+  "materials": 7,
+  "uvLayers": 1,
+  "dimensions": [
+    1.2565854787826538,
+    1.1200001239776611,
+    1.8735756874084473
+  ],
+  "referenceCrop": [
+    981,
+    348,
+    227,
+    269
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "phan-thiet",
+  "glb": "phan-thiet.glb",
+  "blend": "art-source/models/vietnam/phan-thiet.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

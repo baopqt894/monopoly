@@ -1,0 +1,133 @@
+.board-selection-prompt.flight-target-hud {
+  width: min(340px, calc(100% - 40px));
+  text-align: left;
+}
+.flight-selection-card {
+  overflow: hidden;
+  border: 3px solid #254f63;
+  border-radius: 17px;
+  background: #fff9e9;
+  color: #254f63;
+  box-shadow:
+    0 6px 0 #254f63,
+    0 12px 24px #254f6320;
+  pointer-events: auto;
+}
+.flight-selection-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 8px 14px;
+  background: #12aabb;
+  border-bottom: 3px solid #254f63;
+}
+.flight-selection-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #fff9df;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  text-shadow: 0 2px 0 #08798e60;
+}
+.flight-selection-icon {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  border: 2px solid #254f63;
+  border-radius: 8px;
+  background: #ffda77;
+  box-shadow: 0 2px 0 #254f63;
+  transform: rotate(-5deg);
+}
+.flight-selection-icon svg {
+  width: 23px;
+  height: 23px;
+}
+.flight-selection-body {
+  padding: 14px;
+}
+.flight-selection-body > p {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.flight-selection-fare {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 11px;
+  border: 1px solid #e1d5a4;
+  border-radius: 9px;
+  background: #fff0bd;
+}
+.flight-selection-fare > span {
+  color: #8a794b;
+  font-size: 11px;
+  font-weight: 600;
+}
+.flight-selection-fare strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 19px;
+  font-weight: 800;
+}
+.flight-selection-coin {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #d2ad51;
+  border-radius: 50%;
+  background: #ffe69b;
+  color: #a57d28;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 2px 0 #d4bd71;
+}
+.flight-selection-actions {
+  display: flex;
+  justify-content: center;
+  padding: 0 14px 12px;
+}
+.flight-selection-actions button {
+  padding: 7px 23px;
+  border: 2px solid #96b4b7;
+  border-radius: 9px;
+  background: #eaf0ef;
+  color: #557b87;
+  box-shadow: 0 3px 0 #96b4b7;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.flight-selection-actions button:focus-visible {
+  outline: 3px solid #d2ad51;
+  outline-offset: 3px;
+}
+@media (max-width: 600px), (max-height: 600px) {
+  .board-selection-prompt.flight-target-hud {
+    width: min(285px, calc(100% - 70px));
+  }
+  .flight-selection-header {
+    min-height: 39px;
+    padding: 6px 11px;
+  }
+  .flight-selection-header h2 {
+    font-size: 14px;
+  }
+  .flight-selection-body {
+    padding: 11px;
+  }
+  .flight-selection-body > p {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+}

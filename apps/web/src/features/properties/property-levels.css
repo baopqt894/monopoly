@@ -1,0 +1,172 @@
+.property-level-picker {
+  border: 0;
+  padding: 0;
+  margin: 16px 0;
+  min-width: 0;
+}
+.property-level-picker legend {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+.property-level-picker > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.property-level-picker button {
+  flex: 1 1 75px;
+  display: grid;
+  gap: 6px;
+  padding: 12px 8px;
+  background: #f3f5e9;
+  border: 1px solid #d6dfcf;
+  border-radius: 12px;
+  color: #45665c;
+}
+.property-level-picker button.is-selected {
+  border-color: #318c80;
+  background: #e1f2df;
+  box-shadow: inset 0 0 0 1px #318c80;
+}
+.property-level-picker button span {
+  font-size: 12px;
+}
+.property-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 12px;
+  background: #eef4df;
+  border-radius: 12px;
+}
+.property-total strong {
+  font-size: 20px;
+  color: #337c66;
+}
+.buyback-action {
+  margin-top: 14px;
+}
+.property-level-picker .property-standard-levels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.property-standard-levels > button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 114px;
+  padding: 15px 5px 12px;
+  border-radius: 12px;
+}
+.property-standard-levels > button strong {
+  font-size: 12px;
+  line-height: 1.2;
+}
+.property-standard-levels .level-price {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.property-standard-levels .level-state-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  top: 5px;
+  right: 5px;
+  color: #3c8c69;
+}
+.property-standard-levels > button.is-selected {
+  background: #d7f0d5;
+  border-color: #489673;
+  box-shadow:
+    inset 0 0 0 1px #489673,
+    0 3px 0 #80b78b40;
+}
+.property-level-picker button.is-unavailable,
+.property-level-picker button.is-unavailable:disabled {
+  background: #29382fe8;
+  border-color: #26362d;
+  color: #b1bbb3;
+  box-shadow: inset 0 1px 4px #00000020;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.property-standard-levels > button.is-unavailable .level-building-icon {
+  opacity: 0.35;
+}
+.property-standard-levels > button.is-unavailable .level-price,
+.property-standard-levels > button.is-unavailable .level-state-icon {
+  color: #9aa99e;
+}
+.property-standard-levels > button.is-current {
+  border-color: #8cae95;
+}
+.property-level-picker .landmark-level {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 9px;
+  padding: 12px;
+  text-align: left;
+}
+.landmark-level > span {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.landmark-level strong {
+  font-size: 12px;
+}
+.landmark-level > span > span {
+  font-size: 10px;
+  line-height: 1.4;
+}
+.landmark-level > b {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.landmark-level > svg {
+  flex-shrink: 0;
+}
+.property-standard-levels > button:focus-visible,
+.landmark-level:focus-visible {
+  outline: 3px solid #e7bf64;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .property-level-picker .property-standard-levels {
+    gap: 6px;
+  }
+  .property-standard-levels > button {
+    min-height: 99px;
+    padding: 16px 3px 10px;
+    gap: 6px;
+    border-radius: 9px;
+  }
+  .property-standard-levels > button strong,
+  .property-standard-levels .level-price {
+    font-size: 10px;
+  }
+  .property-standard-levels .level-building-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .property-standard-levels .level-state-icon {
+    top: 4px;
+    right: 3px;
+  }
+}

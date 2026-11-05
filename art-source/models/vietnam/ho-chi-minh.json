@@ -1,0 +1,20 @@
+{
+  "id": "ho-chi-minh",
+  "city": "TP. Hồ Chí Minh",
+  "landmark": "Chợ Bến Thành",
+  "revision": 2,
+  "status": "completed-batch",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 51159,
+  "triangles": 99818,
+  "materials": 6,
+  "dimensions": [
+    1.4199999570846558,
+    0.9903589487075806,
+    1.3508204221725464
+  ],
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png",
+  "glb": "ho-chi-minh.glb",
+  "blend": "art-source/models/vietnam/ho-chi-minh.blend"
+}

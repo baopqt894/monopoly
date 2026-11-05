@@ -1,0 +1,122 @@
+.monopoly-notice {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  z-index: 60;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  max-width: calc(100% - 28px);
+  color: #fff6cd;
+  pointer-events: none;
+  animation: monopoly-arrive 380ms cubic-bezier(0.2, 1.5, 0.4, 1) both;
+}
+.monopoly-crown {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 58px;
+  margin-bottom: -7px;
+  border-radius: 28px 28px 8px 8px;
+  background: #f5ba4b;
+  border: 3px solid #fff0b3;
+  box-shadow: 0 3px 0 #b77739;
+  transform: rotate(-7deg);
+}
+.monopoly-word {
+  position: relative;
+  padding: 11px 26px 15px;
+  border: 3px solid #fff1b3;
+  border-radius: 17px;
+  background: linear-gradient(180deg, #ffd971, #efac35);
+  box-shadow:
+    0 6px 0 #bd7d36,
+    0 12px 35px #6b663b33,
+    inset 0 3px 0 #fff5c0;
+  color: #825225;
+  font-size: clamp(30px, 5vw, 58px);
+  font-weight: 950;
+  letter-spacing: 0.045em;
+  line-height: 1;
+  text-shadow: 0 2px 0 #ffe7a1;
+}
+.monopoly-groups {
+  display: grid;
+  gap: 4px;
+  margin-top: 16px;
+  padding: 9px 16px;
+  border: 2px solid #e5f2db;
+  border-radius: 13px;
+  background: #fffcef;
+  color: #365d56;
+  font-size: clamp(12px, 2.5vw, 16px);
+  font-weight: 800;
+  box-shadow: 0 3px 0 #5a8c7330;
+}
+.monopoly-groups span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.monopoly-groups i {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+}
+.monopoly-sparks {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.monopoly-sparks i {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  color: #ffda6b;
+  font-style: normal;
+  font-size: 24px;
+  transform: rotate(calc(var(--spark) * 45deg)) translateX(clamp(125px, 20vw, 210px));
+  animation: monopoly-spark 650ms ease-out both;
+}
+@keyframes monopoly-arrive {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.65) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+  }
+}
+@keyframes monopoly-spark {
+  from {
+    opacity: 0;
+    scale: 0.4;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .monopoly-notice,
+  .monopoly-sparks i {
+    animation: none;
+  }
+}
+
+.monopoly-groups { max-width: 100%; overflow-wrap: anywhere; }
+.monopoly-groups span { min-width: 0; }
+@media (max-width: 900px), (max-height: 600px) {
+  .monopoly-crown { width: 45px; height: 38px; border-width: 2px; }
+  .monopoly-crown > svg { width: 28px; height: 28px; }
+  .monopoly-word { font-size: clamp(23px, min(5vw, 7dvh), 38px); padding: 8px 16px 10px; border-width: 2px; border-radius: 12px; }
+  .monopoly-groups { font-size: 11px; padding: 6px 10px; margin-top: 11px; max-width: min(300px, calc(100vw - 40px)); }
+  .monopoly-sparks i { font-size: 15px; transform: rotate(calc(var(--spark) * 45deg)) translateX(clamp(95px, 18vw, 140px)); }
+}
+@media (max-width: 600px) and (min-height: 501px) {
+  .monopoly-notice { left: calc((100% - 47px) / 2); max-width: calc(100% - 70px); }
+}

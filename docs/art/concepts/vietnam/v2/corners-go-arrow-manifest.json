@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "revision": 4,
+  "type": "generated-concept-contact-sheet",
+  "tool": "built-in image_gen",
+  "file": "../../../../../public/assets/board/corners-go-arrow.png",
+  "status": "concept-for-review",
+  "scope": "GO has only centered arrow; whole-tile desert island; festival and airport scenery at perimeter; not runtime integration",
+  "order": [
+    "Xuất phát",
+    "Đảo hoang",
+    "Lễ hội",
+    "Sân bay"
+  ],
+  "prompt_file": "corners-go-arrow-prompt.txt",
+  "reference_images": [
+    "corners-full-island.png"
+  ],
+  "width": 1254,
+  "height": 1254,
+  "bytes": 1769656,
+  "sha256": "4ffcedfdd2d7213966b94c1d20091ac1a9494f3b8a2f747bb4fcb904f16870de",
+  "cleanup_note": "Runtime atlas moved without changing its bytes. Reference image paths describe historical generation inputs, removed from the current tree."
+}

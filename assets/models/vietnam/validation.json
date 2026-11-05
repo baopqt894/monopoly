@@ -1,0 +1,296 @@
+{
+  "passed": true,
+  "modelCount": 20,
+  "checks": [
+    "Blender GLB import",
+    "finite vertex/normal/UV",
+    "footprint",
+    "ground",
+    "triangle counts",
+    "editable Blender sources without preview cameras/lights",
+    "Python syntax"
+  ],
+  "limitations": "No LOD/collision or map performance certification. Eight batch-completed models have not been individually approved.",
+  "models": [
+    {
+      "id": "chau-doc",
+      "passed": true,
+      "triangles": 156882,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.3620100021362305,
+        1.1200000047683716,
+        1.4478392601013184
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "can-tho",
+      "passed": true,
+      "triangles": 206084,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4199999570846558,
+        1.1182500123977661,
+        1.086807131767273
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "soc-trang",
+      "passed": true,
+      "triangles": 172132,
+      "importedMeshes": 1,
+      "dimensions": [
+        0.8668200373649597,
+        1.1200001239776611,
+        1.3270742893218994
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "bac-lieu",
+      "passed": true,
+      "triangles": 221544,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.3757870197296143,
+        1.1200000047683716,
+        1.0568230152130127
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "ca-mau",
+      "passed": true,
+      "triangles": 58530,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4199998378753662,
+        1.0103845596313477,
+        1.869484543800354
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "buon-ma-thuot",
+      "passed": true,
+      "triangles": 265776,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.2391488552093506,
+        1.119999885559082,
+        1.0520297288894653
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "kon-tum",
+      "passed": true,
+      "triangles": 177208,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.1443477869033813,
+        1.1200000047683716,
+        1.6829218864440918
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "quy-nhon",
+      "passed": true,
+      "triangles": 14692,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4200000166893005,
+        0.9968980550765991,
+        1.6132398881018162
+      ],
+      "ground": -3.725290298461914e-09,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "nha-trang",
+      "passed": true,
+      "triangles": 78256,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.2565854787826538,
+        1.1200000643730164,
+        1.7770738750696182
+      ],
+      "ground": -1.4901161193847656e-08,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "phan-thiet",
+      "passed": true,
+      "triangles": 138276,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.2565854787826538,
+        1.1200001239776611,
+        1.8735756874084473
+      ],
+      "ground": -2.384185791015625e-07,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "hue",
+      "passed": true,
+      "triangles": 256804,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.42000013589859,
+        0.6473529934883118,
+        1.0799315571784973
+      ],
+      "ground": -5.960464477539063e-08,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "da-nang",
+      "passed": true,
+      "triangles": 47606,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4200000762939453,
+        0.5859223902225494,
+        0.6789805591106415
+      ],
+      "ground": 2.9802322387695312e-08,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "hoi-an",
+      "passed": true,
+      "triangles": 114020,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4199999570846558,
+        0.77681964635849,
+        0.9853090643882751
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "vinh",
+      "passed": true,
+      "triangles": 34480,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4199999570846558,
+        0.9379307627677917,
+        1.2588865756988525
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "dong-hoi",
+      "passed": true,
+      "triangles": 7228,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.3866666555404663,
+        1.1200000047683716,
+        2.493333339691162
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "ninh-binh",
+      "passed": true,
+      "triangles": 214650,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.1905514001846313,
+        1.1200000643730164,
+        2.0680315643548965
+      ],
+      "ground": -1.4901161193847656e-08,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "ha-long",
+      "passed": true,
+      "triangles": 12852,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4046204090118408,
+        1.1200001239776611,
+        0.9836039245128632
+      ],
+      "ground": -2.9802322387695312e-08,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "hai-phong",
+      "passed": true,
+      "triangles": 127889,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4110236167907715,
+        1.1200000047683716,
+        1.274646994823546
+      ],
+      "ground": 2.6282362952656513e-09,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "ha-noi",
+      "passed": true,
+      "triangles": 30134,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.3423529863357544,
+        1.1200000643730164,
+        1.622352957725525
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    },
+    {
+      "id": "ho-chi-minh",
+      "passed": true,
+      "triangles": 99818,
+      "importedMeshes": 1,
+      "dimensions": [
+        1.4199999570846558,
+        0.9903589189052582,
+        1.3508204221725464
+      ],
+      "ground": 0.0,
+      "editableSource": true,
+      "sourceHasPreviewObjects": false
+    }
+  ]
+}

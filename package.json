@@ -1,0 +1,38 @@
+{
+  "name": "ty-phu-city",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "start": "next start --hostname 0.0.0.0",
+    "build": "npm run typecheck && npm run build:production",
+    "build:production": "next build --webpack",
+    "typecheck": "tsc --noEmit",
+    "benchmark:sync": "node scripts/benchmark-room-sync.mjs",
+    "format": "prettier --write app apps packages scripts docs README.md AGENTS.md next.config.mjs vercel.json .github/workflows",
+    "test": "node --import tsx --test packages/game-engine/tests/*.test.ts apps/server/tests/*.test.ts",
+    "preview": "npm start"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.180.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

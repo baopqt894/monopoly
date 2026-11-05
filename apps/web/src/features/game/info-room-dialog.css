@@ -1,0 +1,62 @@
+.game-screen .modal.cartoon-property-dialog.info-room-dialog {
+  width: min(500px, calc(100vw - 28px));
+}
+.info-room-dialog .property-dialog-body {
+  padding: 14px 16px 17px;
+}
+.info-room-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.info-room-actions > button {
+  flex: 1;
+}
+.info-room-primary,
+.info-room-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 39px;
+  padding: 9px 14px;
+  border: 2px solid #254f63;
+  border-radius: 10px;
+  background: #4f9fad;
+  color: #fff9df;
+  box-shadow: 0 3px 0 #254f63;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.info-room-secondary {
+  background: #eaf0ef;
+  border-color: #96b4b7;
+  color: #557b87;
+  box-shadow: 0 3px 0 #96b4b7;
+}
+.info-room-primary:hover:not(:disabled),
+.info-room-secondary:hover:not(:disabled) {
+  filter: brightness(1.04);
+}
+.info-room-primary:active:not(:disabled),
+.info-room-secondary:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+.info-room-primary:focus-visible,
+.info-room-secondary:focus-visible {
+  outline: 3px solid #d2ad51;
+  outline-offset: 3px;
+}
+.info-room-primary:disabled,
+.info-room-secondary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@media (max-width: 600px), (max-height: 600px) {
+  .info-room-dialog .property-dialog-body {
+    padding: 11px 12px 14px;
+  }
+}

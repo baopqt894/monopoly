@@ -1,0 +1,121 @@
+.cartoon-roll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 68px;
+  min-width: 275px;
+  padding: 8px 24px 8px 12px;
+  border: 3px solid #254f63;
+  border-radius: 17px;
+  background: #ffda77;
+  color: #254f63;
+  box-shadow:
+    0 6px 0 #254f63,
+    inset 0 2px 0 #fff0bc,
+    0 12px 22px #254f631c;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.12s,
+    box-shadow 0.12s,
+    background 0.12s;
+}
+.roll-button-art {
+  display: grid;
+  place-items: center;
+  width: 61px;
+  height: 49px;
+  flex-shrink: 0;
+}
+.roll-button-art svg {
+  display: block;
+  width: 61px;
+  height: 53px;
+}
+.roll-button-label {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+}
+.cartoon-roll-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #ffe394;
+  box-shadow:
+    0 8px 0 #254f63,
+    inset 0 2px 0 #fff0bc,
+    0 14px 24px #254f6320;
+}
+.cartoon-roll-button:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #254f63,
+    inset 0 2px 0 #fff0bc;
+}
+.cartoon-roll-button:focus-visible {
+  outline: 3px solid #fff9e9;
+  outline-offset: 5px;
+}
+.cartoon-roll-button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+.game-screen .game-center-controls.is-roll-controls {
+  top: 57%;
+  bottom: auto;
+  transform: translateX(-50%);
+  gap: 10px;
+}
+.game-screen .your-turn-bubble.cartoon-turn-label {
+  padding: 7px 12px;
+  border: 2px solid #739d97;
+  border-radius: 9px;
+  background: #fff9e9;
+  color: #527d70;
+  box-shadow: 0 3px 0 #739d9733;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.game-screen .cartoon-turn-label::before {
+  width: 6px;
+  height: 6px;
+  background: #65a996;
+}
+.game-screen .turn-dice-status.cartoon-roll-status {
+  padding: 7px 14px 7px 8px;
+  border: 2px solid #254f63;
+  border-radius: 13px;
+  background: #fff9e9;
+  color: #254f63;
+  box-shadow: 0 4px 0 #254f63;
+  font-size: 13px;
+  font-weight: 800;
+}
+.cartoon-roll-status > svg {
+  width: 42px;
+  height: 37px;
+}
+@media (max-width: 600px), (max-height: 600px) {
+  .cartoon-roll-button {
+    min-width: 235px;
+    min-height: 59px;
+    padding: 6px 18px 6px 9px;
+    gap: 9px;
+  }
+  .roll-button-label {
+    font-size: 15px;
+  }
+  .roll-button-art,
+  .roll-button-art svg {
+    width: 52px;
+    height: 45px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cartoon-roll-button {
+    transition: none;
+  }
+}

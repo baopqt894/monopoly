@@ -1,0 +1,29 @@
+{
+  "city": "Cần Thơ",
+  "landmark": "Nhà cổ Bình Thủy",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 113168,
+  "triangles": 206084,
+  "materials": 8,
+  "uvLayers": 1,
+  "dimensions": [
+    1.4199999570846558,
+    1.1182500123977661,
+    1.086807131767273
+  ],
+  "referenceCrop": [
+    249,
+    99,
+    244,
+    213
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "can-tho",
+  "glb": "can-tho.glb",
+  "blend": "art-source/models/vietnam/can-tho.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

@@ -1,0 +1,29 @@
+{
+  "city": "Quy Nhơn",
+  "landmark": "Tháp Đôi",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 8074,
+  "triangles": 14692,
+  "materials": 9,
+  "uvLayers": 1,
+  "dimensions": [
+    1.4200000762939453,
+    0.9968980550765991,
+    1.6132398843765259
+  ],
+  "referenceCrop": [
+    487,
+    363,
+    246,
+    254
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "quy-nhon",
+  "glb": "quy-nhon.glb",
+  "blend": "art-source/models/vietnam/quy-nhon.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

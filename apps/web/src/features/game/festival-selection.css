@@ -1,0 +1,129 @@
+.board-selection-prompt.festival-selection {
+  top: 50%;
+  bottom: auto;
+  width: min(340px, calc(100% - 40px));
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+.festival-selection-card {
+  overflow: hidden;
+  border: 3px solid #254f63;
+  border-radius: 17px;
+  background: #fff9e9;
+  color: #254f63;
+  box-shadow:
+    0 6px 0 #254f63,
+    0 12px 24px #254f6320;
+  pointer-events: auto;
+}
+.festival-selection-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 8px 14px;
+  background: #12aabb;
+  border-bottom: 3px solid #254f63;
+}
+.festival-selection-header h2 {
+  margin: 0;
+  color: #fff9df;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  text-shadow: 0 2px 0 #08798e60;
+}
+.festival-selection-icon {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  border: 2px solid #254f63;
+  border-radius: 8px;
+  background: #ffda77;
+  box-shadow: 0 2px 0 #254f63;
+  transform: rotate(-5deg);
+}
+.festival-selection-icon svg {
+  width: 23px;
+  height: 23px;
+}
+.festival-selection-body {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+.festival-selection-body > p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.festival-selection-bonus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 11px;
+  border: 1px solid #e1d5a4;
+  border-radius: 9px;
+  background: #fff0bd;
+}
+.festival-selection-bonus > span {
+  color: #8a794b;
+  font-size: 11px;
+  font-weight: 600;
+}
+.festival-selection-bonus strong {
+  color: #254f63;
+  font-size: 22px;
+  font-weight: 800;
+}
+.festival-selection-skip {
+  min-height: 35px;
+  padding: 7px 20px;
+  border: 2px solid #96b4b7;
+  border-radius: 9px;
+  background: #eaf0ef;
+  color: #557b87;
+  box-shadow: 0 3px 0 #96b4b7;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.festival-selection-skip:hover:not(:disabled) {
+  background: #e1eeeb;
+}
+.festival-selection-skip:focus-visible {
+  outline: 3px solid #d2ad51;
+  outline-offset: 3px;
+}
+.festival-selection-skip:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@media (max-width: 600px), (max-height: 600px) {
+  .board-selection-prompt.festival-selection {
+    width: min(285px, calc(100% - 70px));
+  }
+  .festival-selection-header {
+    min-height: 39px;
+    padding: 6px 11px;
+  }
+  .festival-selection-header h2 {
+    font-size: 14px;
+  }
+  .festival-selection-body {
+    gap: 9px;
+    padding: 11px;
+  }
+  .festival-selection-body > p {
+    font-size: 12px;
+  }
+  .festival-selection-bonus strong {
+    font-size: 20px;
+  }
+}

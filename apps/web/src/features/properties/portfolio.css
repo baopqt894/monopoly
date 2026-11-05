@@ -1,0 +1,278 @@
+.game-screen .modal.cartoon-property-dialog.portfolio-modal {
+  width: min(500px, calc(100vw - 28px));
+  padding: 0;
+}
+.portfolio-body {
+  padding: 14px 16px 17px;
+}
+.portfolio-modal:not(.is-debt) .action-clock {
+  display: none;
+}
+.portfolio-players {
+  display: grid;
+  grid-template-columns: repeat(var(--player-count), minmax(0, 1fr));
+  gap: 7px;
+  margin-bottom: 14px;
+}
+.portfolio-players button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  min-height: 44px;
+  padding: 6px;
+  border: 2px solid #b7c9c2;
+  border-radius: 10px;
+  background: #edf2e6;
+  color: #7f9287;
+  font: inherit;
+  cursor: pointer;
+}
+.portfolio-players button[aria-pressed='true'] {
+  border-color: #254f63;
+  background: #ffdf86;
+  color: #254f63;
+  box-shadow: 0 3px 0 #254f63;
+}
+.portfolio-players button:focus-visible {
+  outline: 3px solid #d2ad51;
+  outline-offset: 3px;
+}
+.portfolio-players strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 800;
+}
+.portfolio-player-portrait {
+  flex: 0 0 29px;
+  width: 29px;
+  height: 29px;
+  overflow: hidden;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--player-color) 15%, #fff9e9);
+}
+.portfolio-player-portrait .investor-portrait {
+  border-radius: inherit;
+  background-color: transparent;
+}
+.portfolio-modal .portfolio-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 15px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.portfolio-modal .portfolio-summary > span {
+  min-width: 0;
+  padding: 11px 10px;
+  border: 1px solid #bed1bd;
+  border-radius: 10px;
+  background: #e9f1df;
+  color: #7c8e7d;
+  font-size: 10px;
+}
+.portfolio-modal .portfolio-summary > span:nth-child(2) {
+  border-color: #dfce92;
+  background: #fff0bd;
+  color: #92804b;
+}
+.portfolio-modal .portfolio-summary > span:nth-child(3) {
+  border-color: #c3d6d5;
+  background: #e7f0ed;
+}
+.portfolio-modal .portfolio-summary strong {
+  display: block;
+  margin-top: 5px;
+  color: #254f63;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
+}
+.portfolio-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 2px;
+  margin-bottom: 9px;
+  color: #839286;
+  font-size: 10px;
+}
+.portfolio-list-header strong {
+  font-size: 12px;
+  color: #254f63;
+  font-weight: 800;
+}
+.portfolio-modal .portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: min(325px, calc(100dvh - 285px));
+  min-height: 100px;
+  padding: 0 2px 5px 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #afc6ba transparent;
+}
+.portfolio-modal .portfolio-list:focus-visible {
+  outline: 2px solid #8bc3ae;
+  outline-offset: 3px;
+  border-radius: 9px;
+}
+.portfolio-modal .portfolio-property {
+  padding: 8px 10px 8px 7px;
+  border: 1px solid #d1d9c5;
+  border-radius: 12px;
+  background: #fffdf3;
+}
+.portfolio-modal .portfolio-property-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.portfolio-modal .property-swatch {
+  display: grid;
+  place-items: center;
+  flex: 0 0 62px;
+  width: 62px;
+  height: 51px;
+  border: 1px solid color-mix(in srgb, var(--property-color) 35%, #d1d9c5);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--property-color) 10%, #fff9e9);
+}
+.portfolio-modal .property-swatch .property-building,
+.portfolio-modal .property-swatch .resort-art {
+  width: 60px;
+  height: 50px;
+  margin: 0;
+}
+.portfolio-modal .property-swatch .property-landmark-art {
+  position: static;
+  width: 60px;
+  height: 48px;
+  max-width: none;
+  object-fit: contain;
+  transform: none;
+  filter: none;
+}
+.portfolio-modal .property-swatch .property-landmark-fallback {
+  width: 28px;
+  height: 28px;
+  color: #b3944c;
+}
+.portfolio-modal .portfolio-property-copy {
+  flex: 1;
+  min-width: 0;
+}
+.portfolio-modal .portfolio-property-copy strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: #254f63;
+}
+.portfolio-modal .portfolio-property-copy small {
+  display: block;
+  margin-top: 4px;
+  color: #8b998b;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.portfolio-modal .portfolio-property-value {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.portfolio-modal .portfolio-property-value .money {
+  color: #254f63;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.portfolio-level {
+  padding: 3px 6px;
+  border: 1px solid #cbd9c4;
+  border-radius: 5px;
+  background: #eaf0e2;
+  color: #7e937c;
+  font-size: 8px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.portfolio-level.is-landmark {
+  border-color: #e0cb90;
+  background: #fff0bd;
+  color: #a08035;
+}
+.portfolio-modal .property-actions.compact {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #d8dbc6;
+}
+.portfolio-modal .empty-state {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 155px;
+  padding: 20px;
+  color: #8ca797;
+  border: 1px dashed #c8d5bf;
+  border-radius: 12px;
+  background: #f6f7e9;
+}
+.portfolio-modal .empty-state strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+@media (max-width: 600px), (max-height: 600px) {
+  .portfolio-body {
+    padding: 11px 12px 14px;
+  }
+  .portfolio-players {
+    gap: 5px;
+  }
+  .portfolio-players button {
+    flex-direction: column;
+    gap: 3px;
+    padding: 5px 3px;
+  }
+  .portfolio-players strong {
+    max-width: 100%;
+    font-size: 9px;
+  }
+  .portfolio-modal .portfolio-summary > span {
+    padding: 9px 7px;
+    font-size: 9px;
+  }
+  .portfolio-modal .portfolio-summary strong {
+    font-size: 18px;
+  }
+  .portfolio-modal .portfolio-list {
+    max-height: calc(100dvh - 300px);
+  }
+  .portfolio-modal .property-swatch {
+    flex-basis: 52px;
+    width: 52px;
+  }
+  .portfolio-modal .property-swatch .property-building,
+  .portfolio-modal .property-swatch .resort-art {
+    width: 50px;
+  }
+  .portfolio-modal .portfolio-property-heading {
+    gap: 7px;
+  }
+  .portfolio-modal .portfolio-property-copy strong {
+    font-size: 12px;
+  }
+}

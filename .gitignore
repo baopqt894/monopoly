@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.env*
+!.env.example
+coverage/
+artifacts/
+*.tsbuildinfo
+.next/
+__pycache__/
+*.py[cod]
+*.blend1
+art-review/

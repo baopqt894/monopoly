@@ -1,0 +1,29 @@
+{
+  "city": "Buôn Ma Thuột",
+  "landmark": "Bảo tàng Thế giới Cà phê",
+  "revision": 3,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 138112,
+  "triangles": 265776,
+  "materials": 9,
+  "uvLayers": 1,
+  "dimensions": [
+    1.2391488552093506,
+    1.119999885559082,
+    1.0520297288894653
+  ],
+  "referenceCrop": [
+    8,
+    382,
+    268,
+    237
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "buon-ma-thuot",
+  "glb": "buon-ma-thuot.glb",
+  "blend": "art-source/models/vietnam/buon-ma-thuot.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}

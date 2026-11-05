@@ -1,0 +1,88 @@
+.modal {
+  border: 1px solid #dce4d6;
+  border-radius: 20px;
+  padding: 26px;
+  width: min(520px, calc(100vw - 30px));
+  max-height: calc(100dvh - 40px);
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 25px 100px #102f3526;
+}
+.modal::backdrop {
+  background: #152e2c65;
+  backdrop-filter: blur(5px);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.modal-header h2 {
+  font-size: 19px;
+  letter-spacing: -0.6px;
+}
+.modal-body {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.modal-actions > * {
+  flex: 1;
+}
+.modal .field + .field {
+  margin-top: 15px;
+}
+.modal-note {
+  color: #7e8a81;
+  font-size: 11px;
+  line-height: 1.9;
+  margin-top: 16px;
+}
+.mode-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 18px 0;
+}
+.mode-option {
+  text-align: left;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: white;
+}
+.mode-option.active {
+  border-color: var(--green);
+  background: #eef3e9;
+}
+.mode-option strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.mode-option span {
+  font-size: 10px;
+  color: #7e8a81;
+  line-height: 1.7;
+  display: block;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Preserve wheel, touch and keyboard scrolling without visible rails. */
+.modal { overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.modal::-webkit-scrollbar { display: none; }
+@media (max-width: 900px), (max-height: 600px) {
+  .game-screen .modal { max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); padding: 16px; }
+  .game-screen .modal-header { gap: 8px; margin-bottom: 14px; }
+  .game-screen .modal-header h2 { font-size: 16px; overflow-wrap: anywhere; }
+}

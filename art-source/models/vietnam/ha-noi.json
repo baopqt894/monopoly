@@ -1,0 +1,20 @@
+{
+  "id": "ha-noi",
+  "city": "Hà Nội",
+  "landmark": "Tháp Rùa",
+  "revision": 2,
+  "status": "completed-batch",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 15413,
+  "triangles": 30134,
+  "materials": 5,
+  "dimensions": [
+    1.3423529863357544,
+    1.1200001239776611,
+    1.622352957725525
+  ],
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png",
+  "glb": "ha-noi.glb",
+  "blend": "art-source/models/vietnam/ha-noi.blend"
+}

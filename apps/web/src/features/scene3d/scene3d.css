@@ -1,0 +1,200 @@
+.scene3d-frame {
+  aspect-ratio: 1;
+  width: 100%;
+  position: relative;
+  border: 1px solid #d4ddca;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #ecece0;
+  box-shadow: 0 12px 28px #3e51320b;
+}
+.scene3d-frame canvas {
+  display: block;
+  touch-action: pan-y;
+  cursor: pointer;
+}
+.scene3d-tag {
+  position: absolute;
+  left: 16px;
+  top: 17px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #718568;
+  font-size: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+.scene3d-tag > span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #839d6d;
+}
+.scene3d-controls {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: #fffef4e8;
+  padding: 4px;
+  border: 1px solid #dce2d1;
+  border-radius: 9px;
+  box-shadow: 0 4px 15px #2e42230a;
+}
+.scene3d-controls button {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  color: #7b8e6d;
+  border-radius: 6px;
+}
+.scene3d-controls button:hover {
+  background: #eaf0df;
+  color: #31583c;
+}
+.scene3d-controls > span {
+  height: 15px;
+  border-right: 1px solid #d8decb;
+  margin: 0 3px;
+}
+.scene3d-instructions {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  border: 1px solid #d7dfc9;
+  background: #fffef2c9;
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 6.5px;
+  color: #829371;
+  pointer-events: none;
+}
+.scene3d-tooltip {
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #284e3aeb;
+  color: #faf7e5;
+  padding: 9px 13px;
+  border-radius: 7px;
+  font-size: 10px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.scene3d-tooltip span {
+  margin-left: 15px;
+  color: #cbd7b5;
+  font-family: Manrope, sans-serif;
+}
+.scene3d-frame:fullscreen {
+  aspect-ratio: auto;
+  height: 100dvh;
+  width: 100vw;
+  border: 0;
+  border-radius: 0;
+}
+.scene-loading,
+.scene-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 17px;
+  color: #80906f;
+  font-size: 12px;
+}
+.scene-fallback strong {
+  font-size: 15px;
+  color: #4d6d43;
+}
+.scene-fallback p {
+  font-size: 10px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.board-view-switch {
+  display: flex;
+  padding: 3px;
+  gap: 1px;
+  background: #e9eee1;
+  border: 1px solid #dfe6d4;
+  border-radius: 7px;
+  margin-left: auto;
+}
+.board-view-switch button {
+  font-family: Manrope, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  color: #98a38b;
+  background: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.board-view-switch button.active {
+  background: #fffef7;
+  box-shadow: 0 1px 3px #3c512315;
+  color: #47663e;
+}
+@media (max-width: 600px) {
+  .scene3d-tag {
+    left: 12px;
+    top: 13px;
+    font-size: 5px;
+    letter-spacing: 0.6px;
+  }
+  .scene3d-controls {
+    top: 8px;
+    right: 8px;
+    gap: 0;
+    padding: 3px;
+  }
+  .scene3d-controls button {
+    width: 24px;
+    height: 24px;
+  }
+  .scene3d-controls svg {
+    width: 12px;
+    height: 12px;
+  }
+  .scene3d-controls > span {
+    margin: 0 1px;
+  }
+  .scene3d-instructions {
+    font-size: 5.5px;
+    bottom: 11px;
+    padding: 6px 10px;
+    gap: 4px;
+  }
+  .scene3d-instructions svg {
+    width: 10px;
+    height: 10px;
+  }
+  .scene3d-tooltip {
+    font-size: 8px;
+    bottom: 42px;
+  }
+}

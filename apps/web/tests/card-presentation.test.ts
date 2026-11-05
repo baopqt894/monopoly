@@ -1,0 +1,32 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { createGame, reduceGame } from '@typhu/game-engine';
+import { activeCardReveal } from '../src/features/game/card-presentation';
+
+test('only the current drawn card is presented; subsequent rolls, turns and chained hidden cards never replay history', () => {
+  let game = createGame({ names: ['An', 'Bình'], boardId: 'vietnam-32' });
+  game.phase = 'card';
+  game.drawnCard = { deck: 'chance', cardId: 'chance-08', revealed: false };
+  assert.equal(activeCardReveal(game), null);
+  game = reduceGame(game, { type: 'DRAW_CARD' });
+  assert.equal(activeCardReveal(game)?.cardId, 'chance-08');
+  const saved = structuredClone(game);
+  const legacy = structuredClone(game);
+  delete legacy.lastRevealedCard;
+  assert.equal(activeCardReveal(legacy)?.cardId, 'chance-08');
+  legacy.phase = 'roll';
+  assert.equal(activeCardReveal(legacy), null);
+  game = reduceGame(game, { type: 'RESOLVE_CARD' });
+  assert.equal(activeCardReveal(game), null);
+  game.phase = 'roll';
+  assert.equal(activeCardReveal(game), null);
+  game = reduceGame(game, { type: 'ROLL', dice: [1, 2] });
+  assert.equal(activeCardReveal(game), null);
+  saved.currentPlayer = 1;
+  assert.equal(activeCardReveal(saved), null);
+  saved.currentPlayer = 0;
+  saved.drawnCard!.revealed = false;
+  assert.equal(activeCardReveal(saved), null);
+  saved.drawnCard = { deck: 'chance', cardId: 'chance-17', revealed: true };
+  assert.equal(activeCardReveal(saved), null);
+});

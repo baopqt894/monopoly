@@ -1,0 +1,66 @@
+.shared-board-notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(470px, calc(100% - 48px));
+  padding: 22px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #b7ceba;
+  border-radius: 22px;
+  background: #fffdf3;
+  box-shadow: 0 3px 0 #6f9d7f35, 0 12px 28px #376b5420;
+  color: #3d715b;
+  pointer-events: none;
+  animation: board-notice-appear 220ms ease-out;
+}
+.shared-board-notice-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 82px;
+  height: 82px;
+  border-radius: 26px;
+  background: #e5f0e0;
+  color: #6a9c83;
+}
+.shared-board-notice-art > span {
+  position: absolute;
+  right: -4px;
+  bottom: -3px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 32px;
+  border: 2px solid #fffdf3;
+  border-radius: 10px;
+  background: #f7e6b9;
+  color: #ad894c;
+  transform: rotate(-12deg);
+}
+.shared-board-notice-copy { min-width: 0; }
+.shared-board-notice h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.35; font-weight: 800; overflow-wrap: anywhere; }
+.shared-board-notice p { margin: 0; color: #6b8170; font-size: 15px; line-height: 1.6; }
+.shared-board-notice strong { color: #4a745b; }
+@keyframes board-notice-appear {
+  from { transform: translate(-50%, calc(-50% + 8px)); }
+  to { transform: translate(-50%, -50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shared-board-notice { animation: none; }
+}
+
+@media (max-width: 900px), (max-height: 600px) {
+  .shared-board-notice { width: min(310px, calc(100% - 32px)); padding: 12px; gap: 10px; border-radius: 16px; }
+  .shared-board-notice-art { flex-basis: 48px; height: 48px; border-radius: 15px; }
+  .shared-board-notice-art > svg { width: 30px; height: 30px; }
+  .shared-board-notice-art > span { width: 25px; height: 24px; border-radius: 7px; }
+  .shared-board-notice h2 { font-size: 14px; margin-bottom: 4px; }
+  .shared-board-notice p { font-size: 12px; line-height: 1.45; }
+}
+@media (max-width: 600px) and (min-height: 501px) {
+  .shared-board-notice { left: calc((100% - 47px) / 2); width: min(280px, calc(100% - 70px)); }
+}

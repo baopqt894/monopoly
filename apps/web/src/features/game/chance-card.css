@@ -1,0 +1,121 @@
+.chance-card-stage {
+  position: absolute;
+  z-index: 35;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: min(338px, 62vw, calc((100dvh - 130px) * 0.68));
+  perspective: 1100px;
+}
+.chance-card-float {
+  width: 100%;
+  filter: drop-shadow(0 16px 25px #234f5740);
+}
+.chance-artwork {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+.is-drawing .chance-card-float {
+  animation: chance-draw 900ms ease-out both;
+}
+.is-revealed .chance-card-float {
+  animation: chance-reveal 300ms ease-out both;
+}
+.chance-card-use {
+  border: 2px solid #fff5d6;
+  border-radius: 16px;
+  padding: 12px 32px;
+  background: #fbd77e;
+  color: #624d29;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 0 #cda34d;
+  cursor: pointer;
+}
+.chance-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.chance-card-use:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.chance-card-observer {
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 92px;
+  transform: translateX(-50%);
+  width: min(250px, 42vw, calc((100dvh - 225px) * 0.7));
+  filter: drop-shadow(0 10px 20px #234f5733);
+  pointer-events: none;
+  animation: chance-observe 1s ease-out both;
+}
+@keyframes chance-draw {
+  from {
+    transform: translateY(100px) rotate(-12deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotate(-3deg) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes chance-reveal {
+  0% {
+    transform: rotateY(-90deg) rotate(-3deg);
+    opacity: 0.15;
+  }
+  55% {
+    transform: rotateY(8deg) rotate(1deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(0) rotate(0);
+  }
+}
+@keyframes chance-observe {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+@media (max-width: 600px) {
+  .chance-card-stage {
+    width: min(340px, 80vw, calc((100dvh - 180px) * 0.68));
+  }
+  .chance-card-observer {
+    top: 112px;
+    width: min(250px, 58vw, calc((100dvh - 280px) * 0.7));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chance-card-float,
+  .chance-card-observer {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 900px), (max-height: 600px) {
+  .chance-card-stage { gap: 9px; width: min(270px, 70vw, calc((100dvh - 130px) * .62)); }
+  .chance-card-actions { gap: 7px; }
+  .chance-card-use { font-size: 12px; padding: 9px 18px; border-radius: 12px; white-space: nowrap; }
+}
+@media (max-height: 500px) {
+  .chance-card-observer { top: 70px; width: min(160px, 32vw, calc((100dvh - 150px) * .62)); }
+}
+@media (max-width: 600px) and (min-height: 501px) {
+  .chance-card-observer { top: 154px; width: min(170px, 48vw, calc((100dvh - 290px) * .65)); }
+}

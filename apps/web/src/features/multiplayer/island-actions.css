@@ -1,0 +1,145 @@
+.island-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+.island-actions button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 43px;
+  padding: 6px 10px;
+  border: 2px solid #254f63;
+  border-radius: 11px;
+  background: #fff9e9;
+  color: #254f63;
+  box-shadow: 0 3px 0 #254f63;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.12s,
+    box-shadow 0.12s;
+}
+.island-actions .island-pay {
+  background: #c0e0df;
+}
+.island-action-icon {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+}
+.island-action-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.island-action-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-align: left;
+}
+.island-action-value {
+  margin-left: auto;
+  padding: 5px 7px;
+  border: 1px solid #d4bd7c;
+  border-radius: 7px;
+  background: #fff0bd;
+  font-size: 13px;
+  font-weight: 800;
+}
+.island-action-count {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  border: 1px solid #b8d0c7;
+  border-radius: 7px;
+  background: #e3efdf;
+  color: #548273;
+  font-size: 12px;
+  font-weight: 800;
+}
+.island-actions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 #254f63;
+}
+.island-actions button:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #254f63;
+}
+.island-actions button:focus-visible {
+  outline: 3px solid #fff9e9;
+  outline-offset: 4px;
+}
+.island-actions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.game-screen .game-center-controls.is-roll-controls.is-island-controls {
+  top: 53%;
+  width: 315px;
+  max-width: calc(100% - 40px);
+  transform: translate(-50%, -50%);
+  gap: 9px;
+  padding: 12px;
+  border: 3px solid #254f63;
+  border-radius: 17px;
+  background: #fff9e9;
+  box-shadow:
+    0 6px 0 #254f63,
+    0 12px 24px #254f6320;
+  overflow: hidden;
+}
+.game-screen .is-island-controls .your-turn-bubble.cartoon-turn-label {
+  justify-content: center;
+  width: calc(100% + 24px);
+  margin: -12px -12px 2px;
+  padding: 11px 12px;
+  border: 0;
+  border-bottom: 3px solid #254f63;
+  border-radius: 0;
+  background: #12aabb;
+  color: #fff9df;
+  box-shadow: none;
+  font-size: 11px;
+}
+.game-screen .is-island-controls .cartoon-turn-label::before {
+  background: #fff0bd;
+}
+.is-island-controls .cartoon-roll-button {
+  width: 100%;
+  min-width: 0;
+  min-height: 59px;
+  padding: 6px 18px 6px 9px;
+}
+.is-island-controls .roll-button-art,
+.is-island-controls .roll-button-art svg {
+  width: 52px;
+  height: 45px;
+}
+.is-island-controls .roll-button-label {
+  font-size: 16px;
+}
+@media (max-width: 600px), (max-height: 600px) {
+  .game-screen .game-center-controls.is-roll-controls.is-island-controls {
+    top: 52%;
+    gap: 8px;
+    width: 295px;
+  }
+  .island-actions button {
+    min-height: 40px;
+    padding: 5px 8px;
+  }
+  .island-action-label {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .island-actions button {
+    transition: none;
+  }
+}

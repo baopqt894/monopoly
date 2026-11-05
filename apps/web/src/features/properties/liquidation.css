@@ -1,0 +1,173 @@
+.liquidation-hud {
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  display: grid;
+  gap: 10px;
+  width: 248px;
+  padding: 14px;
+  border: 2px solid #8dcfc0;
+  border-radius: 20px;
+  background: #f6fff4f5;
+  color: #285e59;
+  box-shadow:
+    0 5px 0 #448b9130,
+    0 8px 24px #44889518;
+}
+.liquidation-heading {
+  font-size: 12px;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+.liquidation-totals {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.liquidation-totals > span {
+  display: grid;
+  gap: 3px;
+  font-size: 12px;
+}
+.liquidation-totals > span:last-child {
+  text-align: right;
+}
+.liquidation-totals strong {
+  font-size: 22px;
+  color: #287953;
+}
+.liquidation-sell,
+.liquidation-bankrupt {
+  padding: 10px;
+  border: 0;
+  border-radius: 11px;
+  background: #369e7d;
+  color: white;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.liquidation-sell:disabled,
+.liquidation-bankrupt:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.liquidation-bankrupt {
+  background: #f5e8db;
+  color: #9a5947;
+}
+.liquidation-target-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.liquidation-tile-price {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: auto;
+  padding: 5px 7px;
+  border: 2px solid #fffef0;
+  border-radius: 8px;
+  background: #307f75;
+  color: white;
+  box-shadow:
+    0 2px 0 #195c55,
+    0 3px 6px #204f4930;
+  white-space: nowrap;
+  cursor: pointer;
+  font: inherit;
+  font-size: clamp(10px, 1vw, 14px);
+  font-weight: 900;
+}
+.liquidation-tile-price.is-selected {
+  background: #ffe28a;
+  color: #765021;
+  border-color: #fff7d8;
+  box-shadow: 0 2px 0 #b78e39;
+}
+.liquidation-tile-price:focus-visible {
+  outline: 3px solid #ffb948;
+  outline-offset: 3px;
+}
+.liquidation-tile-price:disabled {
+  cursor: default;
+}
+.liquidation-order {
+  display: inline-grid;
+  place-items: center;
+  min-width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  border-radius: 50%;
+  background: #916727;
+  color: #fff;
+  font-size: 10px;
+}
+.game-screen.is-liquidating .game-activity-ticker,
+.game-screen.is-liquidating .scene3d-instructions {
+  visibility: hidden;
+}
+.game-screen.is-liquidating .schematic-stage {
+  filter: none;
+  opacity: 1;
+}
+.board-tile.is-liquidation-target {
+  box-shadow: inset 0 0 0 3px #37a78d;
+}
+.board-tile.is-liquidation-target.is-liquidation-selected {
+  background: #fff0b1;
+  box-shadow: inset 0 0 0 3px #e6a932;
+}
+.board-tile .liquidation-board-price {
+  position: absolute;
+  inset: auto 0 2px;
+  font-weight: 900;
+  color: #155f4e;
+  background: #f1ffe8;
+  font-size: 11px;
+}
+@media (max-width: 600px) {
+  .liquidation-hud {
+    top: auto;
+    bottom: max(64px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: min(290px, calc(100% - 24px));
+    gap: 8px;
+    padding: 11px;
+  }
+  .liquidation-totals strong {
+    font-size: 20px;
+  }
+  .liquidation-tile-price {
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 6px;
+  }
+  .liquidation-order {
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    min-width: 14px;
+    height: 14px;
+    margin: 0;
+    font-size: 9px;
+  }
+}
+
+.liquidation-label-links { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.liquidation-label-links line { stroke: #277d70; stroke-width: 1.5px; stroke-linecap: round; opacity: .75; }
+
+@media (max-width: 900px), (max-height: 600px) {
+  .liquidation-hud { width: min(250px, calc(100% - 24px)); padding: 10px; gap: 7px; border-radius: 14px; }
+  .liquidation-totals strong { font-size: 18px; }
+  .liquidation-totals > span { font-size: 11px; }
+  .liquidation-sell, .liquidation-bankrupt { padding: 8px; font-size: 11px; }
+}
+@media (max-height: 500px) {
+  .liquidation-hud { top: auto; bottom: 62px; transform: translateX(-50%); }
+}

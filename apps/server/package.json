@@ -1,0 +1,12 @@
+{
+  "name": "@typhu/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@typhu/contracts": "*",
+    "@typhu/game-content": "*",
+    "@typhu/game-engine": "*",
+    "mongodb": "^6.21.0"
+  }
+}

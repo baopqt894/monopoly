@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "revision": 2,
+  "type": "generated-concept-contact-sheet",
+  "tool": "built-in image_gen",
+  "file": "landmarks-simple-revised.png",
+  "scope": "20 simplified landmarks, three approved substitutions; not runtime models",
+  "status": "concept-approved",
+  "prompt_file": "landmarks-revised-prompt.txt",
+  "reference_images": [
+    "landmarks-simple-overview.png"
+  ],
+  "changes": [
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "previous": "Pleiku — Bảo tháp Minh Thành",
+      "current": "Kon Tum — Nhà rông Kon Klor"
+    },
+    {
+      "cell": [
+        2,
+        5
+      ],
+      "previous": "Phan Thiết — Tháp Pô Sah Inư",
+      "current": "Phan Thiết — Tháp nước"
+    },
+    {
+      "cell": [
+        3,
+        5
+      ],
+      "previous": "Đồng Hới — Quảng Bình Quan",
+      "current": "Đồng Hới — Tháp chuông di tích nhà thờ Tam Tòa"
+    }
+  ],
+  "width": 1209,
+  "height": 1301,
+  "bytes": 2023004,
+  "sha256": "fb30cb913a0c6aa0fed29fe6ddfeb8fa05f3751c2f46f1136c27e4315a9299b4",
+  "approved_by": "user",
+  "approval_date": "2026-10-27",
+  "approval_quote": "ok dùng bộ này",
+  "cleanup_note": "Reference image paths describe historical generation inputs, removed from the current tree. Current approved output retained for model work."
+}

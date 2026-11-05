@@ -1,0 +1,29 @@
+{
+  "city": "Cà Mau",
+  "landmark": "Biểu tượng Đất Mũi",
+  "revision": 2,
+  "status": "visual-direction-accepted",
+  "integrated": false,
+  "blender": "5.2.3 LTS",
+  "vertices": 29770,
+  "triangles": 58530,
+  "materials": 6,
+  "uvLayers": 1,
+  "dimensions": [
+    1.4199998378753662,
+    1.0103845596313477,
+    1.869484543800354
+  ],
+  "referenceCrop": [
+    983,
+    58,
+    218,
+    255
+  ],
+  "referenceScale": 4,
+  "referenceNote": "Crop enlarged without generative upscaling. Matching is assessed visually; no claim of pixel-exact equivalence or unseen rear reference.",
+  "id": "ca-mau",
+  "glb": "ca-mau.glb",
+  "blend": "art-source/models/vietnam/ca-mau.blend",
+  "reference": "docs/art/concepts/vietnam/v2/landmarks-simple-revised.png"
+}
