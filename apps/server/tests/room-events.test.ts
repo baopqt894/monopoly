@@ -4,6 +4,7 @@ import { randomUUID } from 'node:crypto';
 import type { RoomRequest } from '@typhu/contracts/http';
 import type { RoomSnapshot, ServerMessage } from '@typhu/contracts/multiplayer';
 import { HttpRoomService } from '../src/http-room-service';
+import { roomPost } from '../src/http-gateway';
 import { roomEventsPost, roomEvent } from '../src/room-events';
 import { MemoryRoomStore } from '../src/room-store';
 import { syncRoomTimer } from '../src/room-timing';
@@ -337,6 +338,64 @@ test('pending trades expire on the stream without requiring any client poll', as
     assert.ok(expired.room.game!.decks.chance.every((id) => id === 'hidden'));
   } finally {
     abort.abort();
+    await reader.cancel();
+  }
+});
+
+test('web and iOS share a room while only iOS receives mobile presentation', async () => {
+  const store = new MemoryRoomStore();
+  const web = { origin: 'https://game.test', 'content-type': 'application/json' };
+  const mobile = { 'x-typhu-client': 'ios-v1', 'content-type': 'application/json' };
+  const makeRequest = (path: string, body: unknown, headers: HeadersInit) =>
+    new Request(`https://game.test/api/room${path}`, {
+      method: 'POST', headers, body: JSON.stringify(body),
+    });
+  const send = async (body: unknown, headers: HeadersInit) => {
+    const response = await roomPost(makeRequest('', body, headers), store);
+    assert.equal(response.status, 200);
+    return (await response.json()).messages[0];
+  };
+  const hostConnection = randomUUID();
+  const host = await send({
+    connectionId: hostConnection, requestId: randomUUID(),
+    message: { type: 'CREATE_ROOM', name: 'Host', maxPlayers: 2, boardId: 'vietnam-32' },
+  }, web);
+  assert.equal(host.type, 'SESSION');
+  const guestConnection = randomUUID();
+  const guest = await send({
+    connectionId: guestConnection, requestId: randomUUID(),
+    message: { type: 'JOIN_ROOM', name: 'Guest', code: host.room.code },
+  }, mobile);
+  assert.equal(guest.type, 'SESSION');
+  const identity = { roomCode: host.room.code, connectionId: guestConnection, token: guest.token };
+  const poll = { ...identity, requestId: randomUUID(), message: null };
+  for (const headers of [{ 'content-type': 'application/json' }, { ...mobile, origin: 'https://other.test' }]) {
+    assert.equal((await roomPost(makeRequest('', poll, headers), store)).status, 403);
+    assert.equal((await roomEventsPost(makeRequest('/events', poll, headers), store)).status, 403);
+  }
+  const stream = await roomEventsPost(makeRequest('/events', poll, mobile), store);
+  assert.equal(stream.status, 200);
+  const reader = stream.body!.getReader();
+  try {
+    const initial = await event(reader);
+    assert.ok(initial.type === 'ROOM_STATE' && initial.room.phase === 'lobby');
+    const ready = await send({ ...identity, requestId: randomUUID(), message: { type: 'SET_READY', ready: true } }, mobile);
+    assert.equal(ready.type, 'ROOM_STATE');
+    assert.ok((await event(reader)).type === 'ROOM_STATE');
+    const started = await send({
+      roomCode: host.room.code, connectionId: hostConnection, token: host.token,
+      requestId: randomUUID(), message: { type: 'START_GAME' },
+    }, web);
+    assert.equal(started.room.phase, 'playing');
+    assert.equal(started.room.presentation, undefined);
+    const pushed = await event(reader);
+    assert.ok(pushed.type === 'ROOM_STATE' && pushed.room.phase === 'playing');
+    assert.equal(pushed.room.revision, started.room.revision);
+    const ios = await send({ ...identity, requestId: randomUUID(), message: null }, mobile);
+    assert.equal(ios.room.presentation.tiles.length, 32);
+    assert.equal(ios.room.presentation.tiles.filter((tile: { landmarkAsset?: string }) => tile.landmarkAsset).length, 20);
+    assert.deepEqual((pushed.room as RoomSnapshot & { presentation: unknown }).presentation, ios.room.presentation);
+  } finally {
     await reader.cancel();
   }
 });

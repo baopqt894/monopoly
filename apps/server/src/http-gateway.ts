@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { HttpRoomService } from './http-room-service';
 import { getRoomStore, type RoomStore } from './room-store';
 import { logRoomFailure } from './room-diagnostics';
+import { mobileMessage, wantsMobilePresentation } from './mobile-presentation';
 
 const headers = { 'Cache-Control': 'no-store, private' };
 export async function readRoomRequest(request: Request): Promise<unknown | Response> {
@@ -12,7 +13,10 @@ export async function readRoomRequest(request: Request): Promise<unknown | Respo
   const host = request.headers.get('host') ?? url.host;
   const protocol =
     request.headers.get('x-forwarded-proto')?.split(',')[0]?.trim() ?? url.protocol.slice(0, -1);
-  if (!origin || origin !== `${protocol}://${host}`) {
+  // Native requests negotiate with a custom header. Browsers must still use the
+  // same origin, and cross-origin preflights receive no CORS permission.
+  const validOrigin = origin === null ? wantsMobilePresentation(request) : origin === `${protocol}://${host}`;
+  if (!validOrigin) {
     return Response.json(
       {
         messages: [
@@ -115,11 +119,12 @@ export async function roomPost(request: Request, providedStore?: RoomStore): Pro
         { status: 429, headers },
       );
     }
+    const result = await new HttpRoomService(store).handle(
+      input,
+      readCode ? { code: readCode, value } : undefined,
+    );
     return Response.json(
-      await new HttpRoomService(store).handle(
-        input,
-        readCode ? { code: readCode, value } : undefined,
-      ),
+      wantsMobilePresentation(request) ? { messages: result.messages.map(mobileMessage) } : result,
       { headers },
     );
   } catch (cause) {

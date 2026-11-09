@@ -8,6 +8,7 @@ import { publicRoomSnapshot } from './rooms';
 import { getRoomStore, type RoomStore } from './room-store';
 import { readRoomRequest, requestRateKey, unavailableResponse } from './http-gateway';
 import { logRoomFailure } from './room-diagnostics';
+import { mobileMessage, wantsMobilePresentation } from './mobile-presentation';
 
 export function roomEvent(
   value: string | null,
@@ -56,6 +57,7 @@ export async function roomEventsPost(
       });
     }
     const encoder = new TextEncoder();
+    const mobile = wantsMobilePresentation(request);
     let controller: ReadableStreamDefaultController<Uint8Array>;
     let closed = false;
     let unsubscribe: (() => Promise<void>) | undefined;
@@ -117,7 +119,7 @@ export async function roomEventsPost(
           );
         }
       }
-      controller.enqueue(encoder.encode(`data:${JSON.stringify(message)}\n\n`));
+      controller.enqueue(encoder.encode(`data:${JSON.stringify(mobile ? mobileMessage(message) : message)}\n\n`));
       if (message.type === 'ERROR' || (message.type === 'ROOM_STATE' && message.room.phase === 'finished')) close();
     }
     const stream = new ReadableStream<Uint8Array>({
